@@ -41,7 +41,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   require(indent >= 0, "the indent must be greater than or equal to zero")
   require(pre.forall(p => !(p == null || p.isEmpty())), "all pre elements must be non-empty")
 
-  val preSet = pre.toSet
+  private val preSet = pre.toSet
 
   /**
    * Pretty-format the node as a String.
@@ -80,9 +80,9 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   private val ↵ = System.getProperty("line.separator");
   private val UTF8 = "UTF-8"
 
-  val CONTENT: scala.util.matching.Regex = """(?s)\s*((?:\S.*\S)|\S|)\s*""".r
+  private val CONTENT: scala.util.matching.Regex = """(?s)\s*((?:\S.*\S)|\S|)\s*""".r
 
-  def leavesText(node: Node) = {
+  private def leavesText(node: Node) = {
     val sb = new StringBuilder
     def $(children: Seq[Node]): Option[String] = {
       if (children.isEmpty) Some(sb.toString)
