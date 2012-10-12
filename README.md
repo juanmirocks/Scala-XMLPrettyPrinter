@@ -18,4 +18,4 @@ Advantages over scala.xml.PrettyPrinter:
 
 ## Instructions
 
-Simply copy the XMLPrettyPrinter file to your project's code
+Simply copy the [XMLPrettyPrinter](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) file to your project's code
