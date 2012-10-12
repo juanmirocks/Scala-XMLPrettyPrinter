@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+		<title>A Sample Page Using Polglot Markup</title>
+		<!-- The link element is self-closing as described in Section 6.4 Void Elements -->
+		<!-- Style commands are included by linking to an external file rather than including them in-line as described in Section 9. Script and Style -->
+		<link type="text/css" rel="stylesheet" href="Sample.css"/>
+	</head>
+
+	<body>
+		<h1>Sample Page Using Polyglot Markup</h1>
+		<p>
+			The source code for this document uses <dfn id="polyglot">polyglot markup</dfn>,
+			a document that is a stream of bytes that parses into identical document trees
+			(with the exception of the xmlns attribute on the root element) when processed as HTML and when processed as XML.
+			The source code for this document also contains additional comments about the use of <a href="#polyglot">polyglot markup</a>.
+		</p>
+
+			<h2>Foreign Elements</h2>
+			<p>
+				The following shapes use SVG elements.
+				<a href="#polyglot">Polyglot markup</a> introduces undeclared (native) default namespaces
+				for the the root SVG element <code>&lt;svg&gt;</code> and respects the mixed-case element names and attribute values
+				when appropriate, as described in sections
+				<a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#element-level-namespaces">
+				5.1 Element-Level Namespaces</a>,
+				<a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#element-names">6.3.1 Element Names</a>,
+				and <a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#attribute-values">6.3.3 Attribute Values</a>.
+			</p>
+
+			<!-- Polyglot markup declares the xlink: namespace on the <svg> element to maintain XML-compatibility  -->
+			<svg width="350" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g>
+					<title>Three SVG shapes</title>
+					<desc>
+						This SVG image contains an ellipse filled with a gradient that goes from white to blue as it moves outward from the center.
+						A yellow rectangle with a black border overlaps the ellipse in the upper-left quadrant,
+						and a red spiral on a white background overlaps the ellipse in the bottom-right quadrant.
+						The red spiral is also a link to the example code for that shape.
+					</desc>
+					<defs>
+						<!-- Note that "radialGradient" and "myGradient" respect mixed-case values. -->
+						 <radialGradient id="myGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+							 <stop offset="0%" style="stop-color:rgb(200,200,200); stop-opacity:0"/>
+							 <stop offset="100%" style="stop-color:rgb(0,0,255); stop-opacity:1"/>
+						 </radialGradient>
+					</defs>
+					<ellipse cx="50%" cy="50%" rx="50%" ry="42%" style="fill:url(#myGradient)"/>
+					<rect x="0" y="0" width="100" height="100" style="fill: yellow; stroke: black;"/>
+					<a xlink:href="http://www.w3schools.com/svg/tryit.asp?filename=path2&amp;type=svg">
+						<!-- Note that the following attribute contains no newlines. -->
+				       <path  transform="translate(60, -175)" d="M153 334 C153 334 151 334 151 334 C151 339 153 344 156 344 C164 344 171 339 171 334 C171 322 164 314 156 314 C142 314 131 322 131 334 C131 350 142 364 156 364 C175 364 191 350 191 334 C191 311 175 294 156 294 C131 294 111 311 111 334 C111 361 131 384 156 384 C186 384 211 361 211 334 C211 300 186 274 156 274" style="fill:white;stroke:red;stroke-width:2"/>
+					</a>
+				</g>
+			</svg>
+			<h2>Void Elements</h2>
+			<!-- Given an empty instance of an element whose content model is not EMPTY (in this case, an empty paragraph)
+			polyglot markup does not use the minimized form, as described in Section 6.4 Void Elements -->
+			<p></p>
+			<p>
+				There is an empty <code>&lt;p&gt;</code> element before this paragraph.
+				<a href="#polyglot">Polyglot markup</a> uses <code>&lt;p&gt;&lt;/p&gt;</code> and not <code>&lt;p /&gt;</code>.
+			</p>
+			<p>
+				<a href="#polyglot">Polyglot markup</a> treats certain elements as self-closing,
+				empty elements, such as the following <code>&lt;img&gt;</code> element.
+			</p>
+			<!-- The img element is self-closing as described in Section 6.4 Void Elements -->
+			<img height="48" width="72" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/>
+			<p>
+				For more information, see
+				<a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#empty-elements">Section 6.4 Void Elements</a>.
+			</p>
+
+
+			<h2>Required Elements</h2>
+			<p>
+				The following table uses the required <code>&lt;tbody&gt;</code> element, as described in
+				<a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#required-elements">Section 6.1 Required Elements</a>.
+			</p>
+			<table>
+				<!-- Explicit use of the <tbody> element, as described in Section 6.1 Required Elements -->
+				<tbody>
+					<tr>
+						<th>Column One</th>
+						<th>Column Two</th>
+					</tr>
+					<tr>
+						<td>Row 1, Column 1</td>
+						<td>Row 1, Column 2</td>
+					</tr>
+					<tr>
+						<td>Row 2, Column 1</td>
+						<td>Row 2, Column 2</td>
+					</tr>
+					<tr>
+						<td>Row 3, Column 1</td>
+						<td>Row 3, Column 2</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>
+				The following table uses the required <code>&lt;colgroup&gt;</code> element, as described in
+				<a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#required-elements">Section 6.1 Required Elements</a>.
+			</p>
+			<table>
+				<!-- Explicit use of the <colgroup> element as described in Section 6.1 Required Elements -->
+					<colgroup>
+						<col style="background-color:silver"/>
+						<col style="background-color:gray"/>
+						<col style="background-color:yellow"/>
+					</colgroup>
+				<tbody>
+				 	<tr>
+				 		<th>ISBN</th>
+				 		<th>Title</th>
+				 		<th>Price</th>
+				 	</tr>
+				 	<tr>
+				 		<td>3476896</td>
+				 		<td>My first HTML</td>
+				 		<td>$53</td>
+				 	</tr>
+					<tr>
+				 		<td>1234567</td>
+				 		<td>Intermediate Polyglot</td>
+				 		<td>$49</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<h2>Named Entity References</h2>
+			<p>
+				This paragraph uses the string <code>&amp;amp;</code> for ampersands and uses the string <code>&amp;#xA0;</code>
+				for a nonbreaking space between the words "polyglot&#xA0;markup" as described in
+				<a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html#named-entity-references">Section 8. Named Entity References</a>.
+			</p>
+	</body>
+</html>

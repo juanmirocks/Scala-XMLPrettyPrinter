@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v2.0 20040830//EN" "http://dtd.nlm.nih.gov/publishing/2.0/journalpublishing.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article" dtd-version="2.0" xml:lang="EN">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">plos</journal-id>
+      <journal-id journal-id-type="nlm-ta">PLoS Genet</journal-id>
+      <journal-id journal-id-type="pmc">plosgen</journal-id>
+      <journal-title>PLoS Genetics</journal-title>
+      <issn pub-type="ppub">1553-7390</issn>
+      <issn pub-type="epub">1553-7404</issn>
+      <publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id">PGENETICS-D-11-02474</article-id>
+      <article-id pub-id-type="doi">10.1371/journal.pgen.1002681</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Medicine</subject>
+          <subj-group>
+            <subject>Neurology</subject>
+            <subj-group>
+              <subject>Cerebellar disorders</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Neurological Disorders</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>MicroRNA-277 Modulates the Neurodegeneration Caused by Fragile X Premutation rCGG Repeats</article-title>
+        <alt-title alt-title-type="running-head">miRNAs in FXTAS</alt-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Tan</surname>
+            <given-names>Huiping</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Poidevin</surname>
+            <given-names>Mickael</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Li</surname>
+            <given-names>He</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Chen</surname>
+            <given-names>Dahua</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Jin</surname>
+            <given-names>Peng</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1"><label>1</label><addr-line>Department of Human Genetics, Emory University School of Medicine, Atlanta, Georgia, United States of America</addr-line>       </aff>
+      <aff id="aff2"><label>2</label><addr-line>Division of Histology and Embryology, Tongji Medical College, Huazhong University of Science and Technology, Wuhan, China</addr-line>       </aff>
+      <aff id="aff3"><label>3</label><addr-line>State Key Laboratory of Reproductive Biology, Institute of Zoology, Chinese Academy of Sciences, Beijing, China</addr-line>       </aff>
+      <contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Orr</surname>
+            <given-names>Harry T.</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group>
+      <aff id="edit1">University of Minnesota, United States of America</aff>
+      <author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">chendh@ioz.ac.cn</email> (DC); <email xlink:type="simple">peng.jin@emory.edu</email> (PJ)</corresp>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: PJ. Performed the experiments: HT MP. Analyzed the data: HT MP HL DC PJ. Contributed reagents/materials/analysis tools: HL DC PJ. Wrote the paper: HT PJ.</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <month>5</month>
+        <year>2012</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>3</day>
+        <month>5</month>
+        <year>2012</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>5</issue>
+      <elocation-id>e1002681</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>16</day>
+          <month>11</month>
+          <year>2011</year>
+        </date>
+        <date date-type="accepted">
+          <day>15</day>
+          <month>3</month>
+          <year>2012</year>
+        </date>
+      </history>
+      <copyright-statement>Tan et al. This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</copyright-statement>
+      <copyright-year>2012</copyright-year>
+      <abstract>
+        <p>Fragile X-associated tremor/ataxia syndrome (FXTAS), a late-onset neurodegenerative disorder, has been recognized in older male fragile X premutation carriers and is uncoupled from fragile X syndrome. Using a <italic>Drosophila</italic> model of FXTAS, we previously showed that transcribed premutation repeats alone are sufficient to cause neurodegeneration. MiRNAs are sequence-specific regulators of post-transcriptional gene expression. To determine the role of miRNAs in rCGG repeat-mediated neurodegeneration, we profiled miRNA expression and identified selective miRNAs, including miR-277, that are altered specifically in <italic>Drosophila</italic> brains expressing rCGG repeats. We tested their genetic interactions with rCGG repeats and found that miR-277 can modulate rCGG repeat-mediated neurodegeneration. Furthermore, we identified Drep-2 and Vimar as functional targets of miR-277 that could modulate rCGG repeat-mediated neurodegeneration. Finally, we found that hnRNP A2/B1, an rCGG repeat-binding protein, can directly regulate the expression of miR-277. These results suggest that sequestration of specific rCGG repeat-binding proteins could lead to aberrant expression of selective miRNAs, which may modulate the pathogenesis of FXTAS by post-transcriptionally regulating the expression of specific mRNAs involved in FXTAS.</p>
+      </abstract>
+      <abstract abstract-type="summary">
+        <title>Author Summary</title>
+        <p>Fragile X–associated tremor/ataxia syndrome (FXTAS) is an adult-onset neurodegenerative disorder, usually affecting males over 50 years of age. FXTAS patients are the carriers of fragile X premutation alleles. Using a FXTAS <italic>Drosophila</italic> model, we previously demonstrated that fragile X premutation rCGG repeats alone could cause neurodegeneration. Pur α and hnRNP A2/B1 were identified as specific premutation rCGG repeat-binding proteins (RBPs) that could bind and modulate fragile X permutation rCGG-mediated neuronal degeneration. MiRNAs are sequence-specific regulators of post-transcriptional gene expression. Here we show that fragile X premutation rCGG repeats could lead to aberrant expression of selective miRNAs, which may modulate the pathogenesis of FXTAS by post-transcriptionally regulating the expression of specific mRNAs involved in FXTAS.</p>
+      </abstract>
+      <counts>
+        <page-count count="11"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>Fragile X syndrome (FXS), the most common form of inherited mental retardation, is caused by expansion of the rCGG trinucleotide repeat in the 5′ untranslated region (5′ UTR) of the fragile X mental retardation 1 (<italic>FMR1</italic>) gene, which leads to silencing of its transcript and the loss of the encoded fragile X mental retardation protein (FMRP) <xref ref-type="bibr" rid="pgen.1002681-Fu1">[1]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Verkerk1">[6]</xref>. Most affected individuals have more than 200 rCGG repeats, referred to as full mutation alleles <xref ref-type="bibr" rid="pgen.1002681-Sherman1">[7]</xref>. Fragile X syndrome carriers have FMR1 alleles, called premutations, with an intermediate number of rCGG repeats between patients (&gt;200 repeats) and normal individuals (&lt;60 repeats) <xref ref-type="bibr" rid="pgen.1002681-Hagerman1">[8]</xref>. Recently, the discovery was made that male and, to a lesser degree, female premutation carriers are at greater risk of developing an age-dependent progressive intention tremor and ataxia syndrome, which is uncoupled from fragile X syndrome and known as fragile X-associated tremor/ataxia syndrome (FXTAS) <xref ref-type="bibr" rid="pgen.1002681-Hagerman2">[9]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Hagerman3">[10]</xref>. This is combined with cognitive decline associated with the accumulation of ubiquitin-positive intranuclear inclusions broadly distributed throughout the brain in neurons, astrocytes, and in the spinal column <xref ref-type="bibr" rid="pgen.1002681-Greco1">[11]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Iwahashi1">[12]</xref>.</p>
+      <p>At the molecular level, the premutation is different from either the normal or full mutation alleles. Based on the observation of significantly elevated levels of rCGG-containing FMR1 mRNA, along with either no detectable change in FMRP or slightly reduced FMRP levels in premutation carriers, an RNA-mediated gain-of-function toxicity model has been proposed for FXTAS <xref ref-type="bibr" rid="pgen.1002681-Greco2">[13]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Willemsen1">[17]</xref>. Several lines of evidence in mouse and <italic>Drosophila</italic> models further support the notion that transcription of the CGG repeats leads to this RNA-mediated neurodegenerative disease <xref ref-type="bibr" rid="pgen.1002681-Greco1">[11]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Willemsen1">[17]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Arocena1">[19]</xref>. The hypothesis is that specific RNA-binding proteins may be sequestered by overproduced rCGG repeats in FXTAS and become functionally limited, thereby contributing to the pathogenesis of this disorder <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Willemsen1">[17]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Arocena1">[19]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Tassone2">[20]</xref>. There are three RNA-binding proteins found to modulate rCGG-mediated neuronal toxicity: Pur α, hnRNP A2/B1, and CUGBP1, which bind rCGG repeats either directly (Pur α and hnRNP A2/B1) or indirectly (CUGBP1, through the interaction with hnRNP A2/B1) <xref ref-type="bibr" rid="pgen.1002681-Sofola1">[21]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Jin2">[22]</xref>.</p>
+      <p>MicroRNAs (miRNAs) are small, noncoding RNAs that regulate gene expression at the post-transcriptional level by targeting mRNAs, leading to translational inhibition, cleavage of the target mRNAs or mRNA decapping/deadenylation <xref ref-type="bibr" rid="pgen.1002681-Bartel1">[23]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Guo1">[24]</xref>. Mounting evidence suggests that miRNAs play essential functions in multiple biological pathways and diseases, from developmental timing, fate determination, apoptosis, and metabolism to immune response and tumorigenesis <xref ref-type="bibr" rid="pgen.1002681-Bushati1">[25]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Abbott1">[31]</xref>. Recent studies have shown that miRNAs are highly expressed in the central nervous system (CNS), and some miRNAs have been implicated in neurogenesis and brain development <xref ref-type="bibr" rid="pgen.1002681-Krichevsky1">[32]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Li1">[34]</xref>.</p>
+      <p>Interest in the functions of miRNAs in the CNS has recently expanded to encompass their roles in neurodegeneration. Investigators have begun to reveal the influence of miRNAs on both neuronal survival and the accumulation of toxic proteins that are associated with neurodegeneration, and are uncovering clues as to how these toxic proteins can influence miRNA expression <xref ref-type="bibr" rid="pgen.1002681-Eacker1">[35]</xref>. For example, miR-133b is found to regulate the maturation and function of midbrain dopaminergic neurons (DNs) within a negative feedback circuit that includes the homeodomain transcription factor Pitx3 in Parkinson's disease <xref ref-type="bibr" rid="pgen.1002681-Kim1">[36]</xref>. In addition, reduced miR-29a/b-1-mediated suppression of BACE1 protein expression contributes to Aβ accumulation and Alzheimer's disease pathology <xref ref-type="bibr" rid="pgen.1002681-Hebert1">[37]</xref>. Moreover, the miRNA <italic>bantam</italic> is found to be a potent modulator of poly-Q- and tau-associated degeneration in <italic>Drosophila</italic> <xref ref-type="bibr" rid="pgen.1002681-Bilen1">[38]</xref>. Other specific miRNAs have also been linked to other neurodegenerative disorders, such as spinocerebellar ataxia type 1 (SCA1) and Huntington's disease (HD) <xref ref-type="bibr" rid="pgen.1002681-Lee1">[39]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Packer1">[40]</xref>. Therefore, miRNA-mediated gene regulation could be a novel mechanism, adding a new dimension to the pathogenesis of neurodegenerative disorders.</p>
+      <p>Here we show that fragile X premutation rCGG repeats can alter the expression of specific miRNAs, including miR-277, in a FXTAS <italic>Drosophila</italic> model. We demonstrate that miR-277 modulates rCGG-mediated neurodegeneration. Furthermore, we identified Drep-2, which is associated with the chromatin condensation and DNA fragmentation events of apoptosis, and Vimar, a modulator of mitochondrial function, as two of the mRNA targets regulated by miR-277. Functionally, Drep-2 and Vimar could modulate the rCGG-mediated neurodegeneration, as well. Finally, we show that hnRNP A2/B1, an rCGG repeat-binding protein, can directly regulate the expression of miR-277. These data suggest that hnRNP A2/B1 could be involved in the transcriptional regulation of selective miRNAs, and fragile X premutation rCGG repeats could alter the expression of specific miRNAs, potentially contributing to the molecular pathogenesis of FXTAS.</p>
+    </sec>
+    <sec id="s2">
+      <title>Results</title>
+      <sec id="s2a">
+        <title>Fragile X premutation rCGG repeats alter the expression of selective miRNAs</title>
+        <p>Given the important roles of miRNAs in neural development and human neurological disorders, we investigated the role of miRNAs in rCGG-mediated neurodegeneration. To determine whether fragile X premutation rCGG repeats could influence the expression of miRNAs, we profiled the expression of 72 known miRNAs using rCGG repeat transgenic flies that we generated previously <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>. In rCGG repeat transgenic flies, the severity of their phenotype depends on both dosage and length of the rCGG repeat. Moderate expression of (CGG)<sub>90</sub> repeats exclusively in the eyes have an effect on morphology and histology; however, expression of (CGG)<sub>90</sub> repeats in the neurons leads to lethality at the embryonic stage, preventing analysis at the adult stage <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>. Therefore, we used a shorter repeat length, r(CGG)<sub>60</sub>, which allowed us to examine the gene expression in adults. To analyze the effect of rCGG repeats in adult brains, we used RNAs isolated from the age- and sex-matched brains of control flies (<italic>elav-GAL4</italic>) and flies expressing rCGG<sub>60</sub> repeats in neurons (<italic>elav-GAL4;UAS-CGG<sub>60</sub>-EGFP</italic>) for miRNA profiling experiments (<xref ref-type="fig" rid="pgen-1002681-g001">Figure 1</xref>). We identified a subset of miRNAs that consistently displayed altered expression in rCGG repeat flies versus the control group. Seven miRNAs with a ≥two-fold increase and two miRNAs with expression decreased by ≥1.5-fold have been found in rCGG repeat flies. These results suggest that fragile X premutation rCGG repeats could lead to the dysregulation of a subset of specific miRNAs.</p>
+        <fig id="pgen-1002681-g001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g001</object-id>
+          <label>Figure 1</label>
+          <caption>
+            <title>Identification of the miRNAs with altered expression in the brains of an FXTAS <italic>Drosophila</italic> model.</title>
+            <p>Relative quantity of miRNA with ≥two-fold change in expression shown for rCGG<sub>60</sub> flies, calibrated to control (elav-GAL4) flies. Control relative quantity = 1.</p>
+          </caption>
+          <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g001" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s2b">
+        <title>Overexpression of miR-277 enhances rCGG-mediated neurodegeneration</title>
+        <p>To assess the potential involvement of the miRNAs that showed altered expression in FXTAS fly brain, we examined the genetic interaction between specific miRNAs and rCGG-mediated neuronal toxicity based on the fragile X premutation rCGG repeat-mediated neurodegenerative eye phenotype we observed previously <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>. We generated <italic>UAS</italic> fly lines that could overexpress <italic>Drosophila</italic> miR-277, bantam, let-7, or miR-1, as well as bantam mutant lines (<italic>ban<sup>12</sup></italic> and <italic>ban<sup>20</sup></italic>) that we generated previously <xref ref-type="bibr" rid="pgen.1002681-Yang1">[41]</xref>. We then crossed these transgenic lines with <italic>gmr-GAL4, UAS-(CGG)<sub>90</sub>-EGFP</italic> transgenic flies that exhibit photoreceptor neurodegeneration to determine the role of specific miRNAs in rCGG-mediated neurodegeneration. As shown in <xref ref-type="fig" rid="pgen-1002681-g002">Figure 2</xref>, flies co-expressing miR-277 and rCGG<sub>90</sub> consistently showed an aggravated eye phenotype, with enhanced disorganized, fused ommatidia compared with flies expressing rCGG<sub>90</sub> alone (<xref ref-type="fig" rid="pgen-1002681-g002">Figure 2B and 2D</xref>). Flies overexpressing miR-277 alone displayed a very mild rough eye phenotype (<xref ref-type="fig" rid="pgen-1002681-g002">Figure 2C</xref>). Alterations of the levels of bantam, let-7, or miR-1 by either a gain of function or loss of function had no effect on rCGG-mediated neurodegeneration (<xref ref-type="fig" rid="pgen-1002681-g002">Figure 2E–2N</xref>). These data together suggest that miR-277 could be involved in rCGG-mediated neurodegeneration. The role of miR-277 in rCGG-mediated neurodegeneration seems specific, since the other miRNAs we found with altered expression in the presence of fragile X premutation rCGG repeats, including bantam, let-7, and miR-1, had no effect on the rCGG<sub>90</sub> eye phenotype. The rest of our work focused on the role of miR-277 and its potential mechanisms in modulating rCGG-mediated neurodegeneration.</p>
+        <fig id="pgen-1002681-g002" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g002</object-id>
+          <label>Figure 2</label>
+          <caption>
+            <title>Overexpression of miR-277 enhances rCGG-mediated neurodegeneration.</title>
+            <p>Shown are scanning electron microscope (SEM) eye images from seven-day-old flies. WT fly eyes show the normal organization of ommatidia (A). Expression of rCGG90 causes disorganized, fused ommatidia (B). Flies overexpressing miR-277 alone present with a mild rough eye phenotype (C). The rCGG90 eye phenotype is enhanced by miR-277 overexpression with aggravated disorganized, fused ommatidia (D). Alteration of bantam, let-7, or miR-1 does not modify the rCGG-induced eye phenotype (F, H, J, L, N). Alteration of bantam, let-7 or miR-1 alone does not cause an abnormal eye phenotype (E, G, I, K, M). Genotypes are B<italic>-gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+</italic>; C<italic>-gmr-GAL4/UAS-miR-277</italic>; D<italic>-gmr-GAL4, UAS-CGG<sub>90</sub>-EGFP/UAS-miR-277</italic>; E-<italic>gmr-GAL4/+;UAS-bantam/+</italic>; F-<italic>gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+;UAS-bantam/+</italic>; G-<italic>gmr-GAL4/+;UAS-Let-7/+</italic>; H-<italic>gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+;UAS-Let-7/+</italic>; I-<italic>gmr-GAL4/UAS-GFP;UAS-miR-1/+</italic>; J-<italic>gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/UAS-GFP;UAS-miR-1/+</italic>; K-<italic>gmr-GAL4/+;ban<sup>12</sup>/+</italic>; L-<italic>gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+;ban<sup>12</sup>/+</italic>; M-<italic>gmr-GAL4/+;ban<sup>20</sup>/+</italic>; N-<italic>gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+;ban<sup>20</sup>/+</italic>.</p>
+          </caption>
+          <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g002" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s2c">
+        <title>Blocking the activity of miR-277 suppresses rCGG-mediated neurodegeneration</title>
+        <p>Our miRNA profiling and genetic interaction studies indicated that an increase in miR-277 expression in rCGG repeat flies could alter the expression of specific cellular mRNAs by miR-277, resulting in the enhanced rCGG-induced eye phenotype. To further explore the potential regulatory effect of miR-277 on rCGG-mediated neurodegeneration, we generated a transgenic miR-277 sponge (miR-277SP) line, which could block the activity of miR-277, to test for any blocking effect on the rCGG-induced neurodegenerative eye phenotype. We generated the miRNA sponge transgenic construct as described previously <xref ref-type="bibr" rid="pgen.1002681-Ebert1">[42]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Loya1">[43]</xref>. In brief, we placed 10 repetitive sequences complementary to miR-277 with mismatches at positions 9–12 into the 3′ UTR of EGFP in a pUASP expression vector (<xref ref-type="fig" rid="pgen-1002681-g003">Figure 3A</xref>). We crossed miR-277SP transgenic flies with the flies expressing 90 CGG repeats and found that the expression of miR-277 sponge could consistently suppress rCGG-mediated neuronal toxicity (<xref ref-type="fig" rid="pgen-1002681-g003">Figure 3B</xref>). MiR-277 sponge alone or scramble control sponge had no effect on eye morphology (<xref ref-type="fig" rid="pgen-1002681-g003">Figure 3B</xref> and Data not shown). This result suggests that blocking the activity of miR-277 could mitigate the neurodegeneration caused by fragile X premutation rCGG repeats.</p>
+        <fig id="pgen-1002681-g003" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g003</object-id>
+          <label>Figure 3</label>
+          <caption>
+            <title>Blocking the activity of miR-277 suppresses rCGG-mediated neurodegeneration.</title>
+            <p>A. Shown is the diagram depicting the strategy for generation of transgenic microRNA sponge lines. The sponge construct contains 10 repetitive sequences complementary to a microRNA downstream of EGFP in a UAS-containing P-element vector. When these UAS lines are crossed to GAL4 driver lines, the F1 progeny generate tissue- or cell-specific expression of microRNA sponge to block the activity of specific miRNA in <italic>Drosophila</italic>. B. The miR-sponge contains bulged sites that are mismatched opposite microRNA at positions 9–12. The bulge is designed to protect Ago2-mediated endonucleolytic cleavage. C. Scanning electron microscope (SEM) eye images from seven-day-old flies. Block of miR-277 activity by miR-277SP could rescue the rCGG-mediated neurodegenerative eye phenotype. Knockdown of miR-277 alone does not cause an abnormal eye phenotype. Genotypes are (left)<italic>-gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+</italic>; (middle)<italic>-gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/UAS-miR-277SP</italic>; (right)-<italic>gmr-GAL4/UAS-miR-277SP</italic>.</p>
+          </caption>
+          <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g003" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s2d">
+        <title>Identification of miR-277 mRNA targets that modulate rCGG-mediated neurodegeneration</title>
+        <p>To seek the mechanisms by which miR-277 modulates rCGG-mediated neurodegeneration, we searched the RNA network and referenced TargetScanFly 5.1 to identify potential miR-277 targets <xref ref-type="bibr" rid="pgen.1002681-Ruby1">[44]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Stark1">[45]</xref>. We selected the top candidates for miR-277 target mRNAs with the mutant alleles available for further analyses (<xref ref-type="table" rid="pgen-1002681-t001">Table 1</xref>). We then carried out a genetic screen on the rCGG<sub>90</sub> neurodegenerative eye phenotype to identify potential miR-277 targets that could modulate rCGG-mediated neuronal toxicity. We crossed <italic>gmr-GAL4, UAS-(CGG)<sub>90</sub>-EGFP</italic> transgenic flies with fly mutants in genes coding for the top candidates for miR-277 target genes (<xref ref-type="table" rid="pgen-1002681-t001">Table 1</xref>). The progenies were then tested for potential suppression or enhancement of the disorganized eye phenotype versus flies expressing rCGG<sub>90</sub> alone. Through this screen, we identified two modifiers of rCGG-mediated neurodegeneration, Drep-2 and Vimar. As shown in <xref ref-type="fig" rid="pgen-1002681-g004">Figure 4</xref>, partial loss of Drep-2 could enhance the rCGG<sub>90</sub> eye phenotype by increasing ommatidial disorganization (<xref ref-type="fig" rid="pgen-1002681-g004">Figure 4B</xref>). Overexpression of Drep-2 could suppress the rCGG-induced eye phenotype (<xref ref-type="fig" rid="pgen-1002681-g004">Figure 4C</xref>). Flies carrying the Drep-2 mutation alone or Drep-2 overexpression alone displayed normal eyes (<xref ref-type="fig" rid="pgen-1002681-g004">Figure 4D and 4E</xref>). We also found a heterozygous loss-of-function mutant of Vimar that aggravated the rCGG<sub>90</sub> eye phenotype (<xref ref-type="fig" rid="pgen-1002681-g004">Figure 4F</xref>). Eyes of control flies carrying the same Vimar mutation but no rCGG<sub>90</sub> repeats are normal (<xref ref-type="fig" rid="pgen-1002681-g004">Figure 4G</xref>). These data together indicate that Drep-2 and Vimar could modulate rCGG-mediated neurodegeneration.</p>
+        <fig id="pgen-1002681-g004" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g004</object-id>
+          <label>Figure 4</label>
+          <caption>
+            <title>Modification of rCGG-mediated neurodegenerative eye phenotype by Drep-2 and Vimar.</title>
+            <p>(A–C) SEM eye images from control flies expressing rCGG<sub>90</sub>, rCGG<sub>90</sub> and a heterozygous mutation in Drep-2 (Drep-2<sup>LOF</sup>), rCGG<sub>90</sub> and overexpression of Drep-2 (Drep-2<sup>OE</sup>), and rCGG<sub>90</sub> and a heterozygous mutation in Vimar (Vimar<sup>LOF</sup>). rCGG<sub>90</sub> flies manifest ommatidial disorganization and fusion (A). This phenotype is enhanced in flies carrying a heterozygous loss-of-function mutation in Drep-2 (B), while the eye phenotype could be suppressed by overexpression of Drep-2 (C). Mutation of Vimar enhances the rCGG<sub>90</sub>-mediated eye phenotype (F). All the mutants alone do not cause any abnormal eye phenotype (D, E, G). Genotypes are A-<italic>gmr-GAL4,UAS-CGG<sub>90</sub>-EGFP/+</italic>; B -<italic>gmr-GAL4, UAS-CGG<sub>90</sub>-EGFP/Drep-2<sup>KG02396</sup></italic>; C-<italic>gmr-GAL4, UAS-CGG<sub>90</sub>-EGFP/Drep-2<sup>d00223</sup></italic>; D-<italic>gmr-GAL4/Drep-2<sup>KG02396</sup></italic>; E-<italic>gmr-GAL4/ Drep-2<sup>d00223</sup></italic>; F -<italic>gmr-GAL4, UAS-CGG<sub>90</sub>-EGFP/ Vimar<sup>K16722</sup></italic>; G-<italic>gmr-GAL4/ Vimar<sup>K16722</sup></italic>.</p>
+          </caption>
+          <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g004" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+        </fig>
+        <table-wrap id="pgen-1002681-t001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.t001</object-id>
+          <label>Table 1</label>
+          <caption>
+            <title>Mutant alleles corresponding to the mRNA targets of miR-277 used for genetic screen.</title>
+          </caption>
+          <graphic id="pgen-1002681-t001-1" xlink:href="info:doi/10.1371/journal.pgen.1002681.t001" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+          <table alternate-form-of="pgen-1002681-t001-1">
+            <colgroup span="1">
+              <col align="left" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Gene</td>
+                <td align="left" rowspan="1" colspan="1">Alleles</td>
+                <td align="left" rowspan="1" colspan="1">Potential function</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Polypeptide GalNAc transferase 5 (Pgant5)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>pgant5<sup>B480</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Oligosaccharide biosynthetic process</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Frizzled (Fz)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>fz<sup>EY03114</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Wnt receptor activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">CG5599</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>CG5599<sup>KG02236</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Dihydrolipoamide branched chain acyltransferase activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Netrin-B (NetB)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>NetB<sup>KG03586</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Motor axon guidance, salivary gland boundary specification</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">CG32767</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>CG32767<sup>BG01357</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Nucleic acid binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Decapping protein 2 (Dcp2)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Dcp2<sup>BG01766</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">RNA binding, hydrolase activity, manganese ion binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Belphegor (Bor)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>bor<sup>c05496</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Nucleoside-triphosphatase activity, ATP binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">CG3267</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>CG3267<sup>e02164</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Methylcrotonoyl-CoA carboxylase activity, CoA carboxylase activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">DNA fragmentation factor-related protein 2 (Drep-2)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Drep-2<sup>KG02396</sup></italic>
+                  <italic>Drep-2<sup>d00223</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Apoptosis, neurogenesis</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">GTPase-activating protein 1 (Gap1)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Gap1<sup>B2</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Ras GTPase activator activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">G protein oα 47A (G-oα47A)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>G-oα47A<sup>01</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">GTP binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">CG1673</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>CG1673<sup>EP1023</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Branched-chain-amino-acid transaminase activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Abrupt (Ab)</td>
+                <td align="left" rowspan="1" colspan="1">ab<sup>k02807</sup></td>
+                <td align="left" rowspan="1" colspan="1">Sequence-specific DNA binding transcription factor activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Visceral mesodermal armadillo-repeats (Vimar)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>vimar<sup>k16722</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Ral GTPase binding, modulator of mitochondrial function</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Scribbled (scrib)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>scrib<sup>j7B3</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Protein binding, post-embryonic organ morphogenesi</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Flotillin 2 (Flo-2)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Flo-2<sup>BG01945</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Cell adhesion</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Synaptotagmin β (Sytβ)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Sytβ<sup>BG02150</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Calcium-dependent phospholipid binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Starry night (stan)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>stan<sup>f00907</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Receptor signaling protein activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Scully (scu)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>scu<sup>f05851</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">NADP+ activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">CG15093</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>CG15093<sup>d04924</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Cellular amino acid metabolic process</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">CG18265</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>CG18265<sup>EY11347</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Zinc ion binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Gliotactin (Gli)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Gli<sup>EY11600</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Carboxylesterase activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Elbow B (Elb)</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>elB<sup>3</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Zinc ion binding, nucleic acid binding</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Cirl</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Cirl<sup>EY12930</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Latrotoxin receptor activity</td>
+              </tr>
+              <tr>
+                <td align="left" rowspan="1" colspan="1">Task6</td>
+                <td align="left" rowspan="1" colspan="1">
+                  <italic>Task6<sup>EY23668</sup></italic>
+                </td>
+                <td align="left" rowspan="1" colspan="1">Potassium channel activity</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </sec>
+      <sec id="s2e">
+        <title>MiR-277 regulates the expression of Drep-2 and Vimar post-transcriptionally</title>
+        <p>Since both Drep-2 and Vimar were predicted to be regulated by miR-277, by introducing 3′-UTR dual luciferase assays, we tested whether miR-277 could indeed target to Drep-2 or Vimar. We cloned the 3′-UTR of Drep-2 or Vimar containing the predicted miR-137 target sites from fly cDNA into a dual luciferase (R-Luc and F-Luc) reporter construct, allowing for the assessment of protein translation of these targets regulated via their 3′-UTR (<xref ref-type="fig" rid="pgen-1002681-g005">Figure 5A</xref>). These 3′-UTR dual constructs were transfected into HEK293 cells. We found that overexpression of miR-277 could suppress the R-Luc activity at 48 h post-transfection (<xref ref-type="fig" rid="pgen-1002681-g005">Figure 5B and 5C</xref>). Furthermore, when we mutated the seed regions of miR-277 located within the Drep2-3′-UTR reporter and Vimar-3′-UTR reporter, we saw that the mutation alleviated the miR-277-mediated suppression of luciferase activity (<xref ref-type="fig" rid="pgen-1002681-g005">Figure 5A–5C</xref>), suggesting the action of miR-277 is specific to the miR-277 seed region within the Drep-2 3′-UTR and Vimar 3′-UTR. Together, these data demonstrate that the effect of miR-277 on Drep-2 and Vimar expression is repressive and specific. Importantly, they also suggest that Drep-2 and Vimar are the functional targets of miR-277.</p>
+        <fig id="pgen-1002681-g005" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g005</object-id>
+          <label>Figure 5</label>
+          <caption>
+            <title>MiR-277 regulates the expression of Drep-2 and Vimar post-transcriptionally.</title>
+            <p>A. The two miR-277 target sites in the Drep-2 3′-UTR and three miR-277 target sites in the Vimar 3′-UTR were predicted by TargetScan. We created the mutant Drep-2 3′-UTR (Drep-2 3′-UTR<sup>ΔmiR-277</sup>) with two miR-277 binding sites deleted and the mutant Vimar 3′-UTR (Vimar 3′ UTR<sup>ΔmiR-277</sup>) with three miR-277 binding sites deleted, as shown. B. The expression of a luciferase reporter gene containing the Drep-2 3′-UTR was suppressed by miR-277 in HEK293FT cells. The suppression is specific to the miR-277 seed region within the Drep-2 3′-UTR, as deletion of the miR-277 target sites in the Drep-2 3′-UTR alleviated repression by miR-277. (*-P&lt;0.05; ns-P&gt;0.05). C. Similar miR-277-mediated suppression was observed with Vimar 3′-UTR constructs. D. Endogenous Drep-2 mRNA expression was significantly reduced in rCGG repeat flies relative to control flies (elav-GAL4), whereas no obvious change of Vimar mRNA expression was observed in the rCGG repeat flies compare to control flies. E. Endogenous Drep-2 mRNA expression was significantly altered in the flies expressing either miR-277 or miR-277 SP, *-P&lt;0.05.</p>
+          </caption>
+          <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g005" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+        </fig>
+        <p>Next we went on to examine the steady-state levels of Drep-2 and Vimar mRNA in rCGG repeat flies (<italic>elav-GAL4;UAS-CGG<sub>60</sub>-EGFP</italic>), in which the expression of miR-277 is increased. We saw a significant reduction of endogenous Drep-2 mRNA in rCGG repeat flies relative to control flies (<italic>elav-GAL4</italic>), whereas the Vimar mRNA expression in rCGG repeat flies remained similar to control flies (<italic>elav-GAL4</italic>) (<xref ref-type="fig" rid="pgen-1002681-g005">Figure 5D</xref>). Furthermore, ectopic expression of miR-277 or miR-277 sponge could alter the endogenous mRNA level of Drep2 while have no apparent effect on Vimar mRNA level (<xref ref-type="fig" rid="pgen-1002681-g005">Figure 5E</xref>). These observations suggest that miR-277 could regulate Drep-2 and Vimar mRNAs differentially, with miR-277 regulating the expression of Drep-2 mainly at the mRNA level, and Vimar via translational suppression instead.</p>
+      </sec>
+      <sec id="s2f">
+        <title>Expression of miR-277 is regulated by the rCGG repeat-binding protein hnRNP A2/B1</title>
+        <p>Two rCGG repeat-binding proteins, Pur α and hnRNP A2/B1, were previously found to bind rCGG repeats directly and modulate rCGG-mediated neuronal toxicity <xref ref-type="bibr" rid="pgen.1002681-Sofola1">[21]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Jin2">[22]</xref>. Intriguingly, recent studies have shown that multiple heterogeneous nuclear ribonucleoproteins (hnRNPs) could interact with heterochromatin protein 1 (HP1) to bind to genomic DNA and modulate heterochromatin formation <xref ref-type="bibr" rid="pgen.1002681-Piacentini1">[46]</xref>. Thus we tested whether hnRNP A2/B1 could interact directly with genomic regions proximal to miR-277. We performed hnRNP A2/B1-specific chromatin immunoprecipitation (ChIP) followed by real-time quantitative PCR across a six-kb region surrounding miR-277. Immunoprecipitation of chromatin chemically cross-linked to DNA with an hnRNP A2/B1-specific antibody demonstrated that a region 1.5 kb upstream of miR-277 was enriched ∼seven-fold relative to IgG control and adjacent regions (<xref ref-type="fig" rid="pgen-1002681-g006">Figure 6A and 6B</xref>). Furthermore, the ectopic expression of hnRNP A2/B1 in fly brain could reduce the expression of miR-277 (<xref ref-type="fig" rid="pgen-1002681-g006">Figure 6C</xref>). These results together suggest that hnRNP A2/B1 could directly bind to the upstream region of miR-277 and regulate its expression. In the presence of fragile X premutation rCGG repeats, hnRNP A2/B1 will be sequestered, leading to the de-repression of the miR-277 locus.</p>
+        <fig id="pgen-1002681-g006" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g006</object-id>
+          <label>Figure 6</label>
+          <caption>
+            <title>Expression of miR-277 is regulated by hnRNPA2/B1.</title>
+            <p>A. Schematic of the six kb proximal to miR-277 on chromosome 3R assayed in ChIP experiments. B. HnRNP A2/B1-specific ChIP assay indicates the enrichment of DNA 1.5 kb upstream of the miR-277 genomic locus. Relative enrichment is calculated relative to IgG-only nonspecific control and normalized to the empty vector. Error bars indicate mean ± SEM. C. Ectopic expression of hnRNP A2/B1 in fly brain could suppress the expression of miR-277, *-P&lt;0.05.</p>
+          </caption>
+          <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g006" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Discussion</title>
+      <p>Fragile X-associated tremor/ataxia syndrome (FXTAS) is a neurodegenerative disorder that afflicts fragile X syndrome premutation carriers, with earlier studies pointing to FXTAS as an RNA-mediated neurodegenerative disease. Several lines of evidence suggest that rCGG premutation repeats may sequester specific RNA-binding proteins, namely Pur α, hnRNP A2/B1, and CUGBP1, and reduce their ability to perform their normal cellular functions, thereby contributing significantly to the pathology of this disorder <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Sofola1">[21]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Jin2">[22]</xref>. The miRNA pathway has been implicated in the regulation of neuronal development and neurogenesis <xref ref-type="bibr" rid="pgen.1002681-Krichevsky1">[32]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Pasquinelli1">[47]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Li2">[49]</xref>. A growing body of evidence has now revealed the role of the miRNA pathway in the molecular pathogenesis of neurodegenerative disorders <xref ref-type="bibr" rid="pgen.1002681-Eacker1">[35]</xref>. Here we demonstrate that specific miRNAs can contribute to fragile X rCGG repeat-mediated neurodegeneration by post-transcriptionally regulating target mRNAs that are involved in FXTAS. We show that miR-277 plays a significant role in modulating rCGG repeat-mediated neurodegeneration. Overexpression of miR-277 enhances rCGG repeat-induced neuronal toxicity, whereas blocking miR-277 activity could suppress rCGG repeat-mediated neurodegeneration. Furthermore, we identified Drep-2 and Vimar as the functional miR-277 targets that could modulate rCGG repeat-induced neurodegeneration. Finally, we show that hnRNP A2/B1, an rCGG repeat-binding protein, can directly regulate the expression of miR-277. Our biochemical and genetic studies demonstrate a novel miRNA-mediated mechanism involving miR-277, Drep-2, and Vimar in the regulation of neuronal survival in FXTAS (<xref ref-type="fig" rid="pgen-1002681-g007">Figure 7</xref>).</p>
+      <fig id="pgen-1002681-g007" position="float">
+        <object-id pub-id-type="doi">10.1371/journal.pgen.1002681.g007</object-id>
+        <label>Figure 7</label>
+        <caption>
+          <title>Proposed model of miR-277 modulating fragile X premutation rCGG repeat-mediated neurodegeneration.</title>
+          <p>HnRNP A2/B1, an rCGG repeat-binding protein, could be sequestered by fragile X premutation rCGG repeats from their normal cellular functions. Sequestration of hnRNP A2/B1 could de-repress the expression of miR-277. MiR-277 could recognize and bind to the 3′-UTR of its mRNA targets, such as Drep-2 and Vimar, to induce their mRNA degradation or translational suppression. Misregulation of Drep-2 or Vimar, which are involved in cell apoptosis or mitochondrial regulation, could lead to the neuronal cell death associated with FXTAS.</p>
+        </caption>
+        <graphic xlink:href="info:doi/10.1371/journal.pgen.1002681.g007" alt-version="no" mimetype="image" position="float" xlink:type="simple"/>
+      </fig>
+      <p>Several lines of evidence from studies in mouse and <italic>Drosophila</italic> models strongly support FXTAS as an RNA-mediated neurodegenerative disorder caused by excessive rCGG repeats <xref ref-type="bibr" rid="pgen.1002681-Greco1">[11]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Willemsen1">[17]</xref>–<xref ref-type="bibr" rid="pgen.1002681-Arocena1">[19]</xref>. The current working model is that specific RNA-binding proteins could be sequestered by overproduced rCGG repeats in FXTAS and become functionally limited, thereby contributing to the pathogenesis of this disorder <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Willemsen1">[17]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Arocena1">[19]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Tassone2">[20]</xref>. Three RNA-binding proteins are known to modulate rCGG-mediated neuronal toxicity: Pur α, hnRNP A2/B1, and CUGBP1, which bind rCGG repeats either directly (Pur α and hnRNP A2/B1) or indirectly (CUGBP1, through the interaction with hnRNP A2/B1) <xref ref-type="bibr" rid="pgen.1002681-Sofola1">[21]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Jin2">[22]</xref>; how the depletion of these RNA-binding proteins could alter RNA metabolism and contribute to FXTAS pathogenesis has thus become the focus in the quest to understand the molecular pathogenesis of this disorder. Nevertheless, the data we present here suggest that the depletion of hnRNP A2/B1 could also directly impact the transcriptional regulation of specific loci, such as miR-277. We know that hnRNPs can interact with HP1 to bind to genomic DNA and modulate heterochromatin formation <xref ref-type="bibr" rid="pgen.1002681-Piacentini1">[46]</xref>. Our results indicate that hnRNP A2/B1 could participate in the transcriptional regulation of miR-277; however, it remains to be determined whether other loci could be directly regulated by hnRNP A2/B1, as well. Identifying those loci will be important to better understand how the depletion of rCGG repeat-binding proteins could lead to neuronal apoptosis.</p>
+      <p>In recent years, several classes of small regulatory RNAs have been identified in a range of tissues and in many species. In particular, miRNAs have been linked to a host of human diseases. Some evidence suggests the involvement of miRNAs in the emergence or progression of neurodegenerative diseases. For example, accumulation of nuclear aggregates that are toxic to neurons have been linked to many neurodegenerative diseases, and miRNAs are known to modulate the accumulation of the toxic proteins by regulating either their mRNAs or the mRNAs of proteins that affect their expression. Moreover, miRNAs might contribute to the pathogenesis of neurodegenerative disease downstream of the accumulation of toxic proteins by altering the expression of other proteins that promote or inhibit cell survival <xref ref-type="bibr" rid="pgen.1002681-Eacker1">[35]</xref>. Our genetic modifier screen revealed that miR-277 could modulate rCGG repeat-mediated neurodegeneration. By combining our genetic screen and reporter assays, we identified Drep-2 and Vimar as the functional targets of miR-277 that could modulate rCGG-mediated neurodegeneration. The closest ortholog of miR-277 in human is miR-597 based on the seed sequence. It would be interesting to further examine the role of miR-597 in FXTAS using mammalian model systems.</p>
+      <p>Drep-2 is associated with the chromatin condensation and DNA fragmentation events of apoptosis <xref ref-type="bibr" rid="pgen.1002681-Inohara1">[50]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Inohara2">[51]</xref>. Drep-2 is one of four <italic>Drosophila</italic> DFF (DNA fragmentation factor)-related proteins. While Drep-1 is a <italic>Drosophila</italic> homolog of DFF45 that can inhibit CIDE-A mediated apoptosis <xref ref-type="bibr" rid="pgen.1002681-Inohara1">[50]</xref>. Drep-2 has been shown to interact with Drep-1 and to regulate its anti-apoptotic activity <xref ref-type="bibr" rid="pgen.1002681-Inohara1">[50]</xref>. Vimar is a Ral GTPase-binding protein that has been shown to regulate mitochondrial function via an increase in citrate synthase activity <xref ref-type="bibr" rid="pgen.1002681-Chen1">[52]</xref>. In the presence of fragile X premutation rCGG repeats, overexpression of miR-277 will suppress the expression of both Drep-2 and Vimar, thereby altering anti-apoptotic activity as well as mitochondrial functions, which have been linked to neuronal cell death associated with neurodegenerative disorders in general (<xref ref-type="fig" rid="pgen-1002681-g007">Figure 7</xref>). Interestingly, we saw a significant reduction of Drep-2 mRNA in the flies expressing rCGG repeats, while Vimar mRNA levels remained similar to control flies. This observed difference may be due to the fact that miRNA could be involved in different modes of action, including mRNA cleavage, translational inhibition and mRNA decapping/deadenylation its target mRNAs <xref ref-type="bibr" rid="pgen.1002681-Bartel1">[23]</xref>, <xref ref-type="bibr" rid="pgen.1002681-Guo1">[24]</xref>.</p>
+      <p>In summary, here we provide both biochemical and genetic evidence to support a role for miRNA and its selective mRNA targets in rCGG-mediated neurodegeneration. Our results suggest that sequestration of specific rCGG repeat-binding proteins can lead to aberrant expression of selective miRNAs that could modulate the pathogenesis of FXTAS by post-transcriptionally regulating the expression of specific mRNAs involved in this disorder. Identification of these miRNAs and their targets could reveal potential new targets for therapeutic interventions to treat FXTAS, as well as other neurodegenerative disorders.</p>
+    </sec>
+    <sec id="s4" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec id="s4a">
+        <title><italic>Drosophila</italic> genetics</title>
+        <p>All flies were maintained under standard culture conditions. The rCGG repeat transgenic flies (<italic>UAS-CGG<sub>60</sub>-EGFP</italic> and <italic>UAS-CGG<sub>90</sub>-EGFP</italic>) were generated in our lab as described previously <xref ref-type="bibr" rid="pgen.1002681-Jin1">[15]</xref>. Flies mutant in genes coding for different candidate miR-277 targets were obtained from Bloomington Stock Center. The UAS-miR-277-Sponge transgenic flies were generated as described previously <xref ref-type="bibr" rid="pgen.1002681-Loya1">[43]</xref>. We introduced 10 repetitive miR-277 sponge sequences (<named-content content-type="gene" xlink:type="simple">TGTCGTACCAGGCGTGCATTTA</named-content>) with a 4-nt linker between each repeat downstream of EGFP in a pUASP expression vector. Similarly a scramble control construct (<named-content content-type="gene" xlink:type="simple">GTTCACGGATAGTGCCTGTACT</named-content>) was generated as well. Both constructs were confirmed by DNA sequencing and then injected in the <italic>w<sup>1118</sup></italic> strain by standard methods.</p>
+      </sec>
+      <sec id="s4b">
+        <title>Relative quantification of mature miRNAs by TaqMan miRNA real-time PCR</title>
+        <p>Total RNAs were isolated from the control (elav-GAL4) and rCGG<sub>60</sub> fly heads using Trizol. TaqMan MicroRNA Assays detecting 72 known individual <italic>Drosophila</italic> miRNAs were obtained from ABI (ABI). cDNA was prepared with High-Capacity cDNA Reverse Transcription Kits (ABI; Cat#437496). The 15-µl reverse transcription reactions consisted of 10 ng of total RNA, 5 U MultiScribe Reverse Transcriptase, 0.5 mM of each dNTP, 1× reverse transcription buffer, 4 U RNase inhibitor, and nuclease-free water. This was performed at 16°C for 30 min and at 42°C for 30 min, terminated at 85°C for 5 min and 4°C until use in TaqMan assays. For real-time PCR of TaqMan MicroRNA Assays, we used 0.5 ul 20×TaqMan MicroRNA Assay Primer, 1.33 ul undiluted cDNA, 5 ul 2×TaqMan Universal PCR Master Mix, 3.17 ul nuclease-free water. Each PCR reaction was performed in triplicate with MicroAmp optical 96-well plates using a 7500 Fast Real-Time PCR System (ABI), with reactions incubated at 95°C for 10 min, followed by 40 cycles of 95°C for 15 s, and 60°C for 1 min. Fluorescence readings were taken during the 60°C step. RQs were calculated using the ΔΔCt method, with 2S RNA TaqMan miRNA control assay as the endogenous control, and calibrated to the control samples.</p>
+      </sec>
+      <sec id="s4c">
+        <title>Quantitative RT–PCR</title>
+        <p>The fly heads from control (<italic>elav-Gal4</italic>) and rCGG<sub>60</sub> flies were collected. Trizol (Invitrogen; Cat# 15596-026) was used to isolate total RNA from each genotype. RNA samples were reverse-transcribed into cDNA with oligo(dT)<sub>20</sub> and SuperScript III (Invitrogen; Cat#18080051). Real-time PCR was performed with gene-specific primers and Power SYBR Green PCR Master Mix (Applied Biosystems; Cat# 4367660) using the 7500 Standard Real-Time PCR System (Applied Biosystems). RpL32 (Qiagen; Cat# QT00985677) was used as an endogenous control for all samples. Primers for Drep2 and Vimar transcripts were designed using Primer Express 3.0 software (Applied Biosystems) and were as follows. Drep2: forward, <named-content content-type="gene" xlink:type="simple">5′-TGGAACGCCTCAACTCCAA-3′</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′-TCGGACTCGCGATCCAA-3′</named-content>. Vimar: forward, <named-content content-type="gene" xlink:type="simple">5′-GCACCCGCCGAACAGA-3′</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′-TGCGATCGTAGTCTTGCGTTA -3′</named-content>. All real-time PCR reactions were performed in triplicate, and RQs were calculated using the ΔΔCt method, with calibration to control samples.</p>
+      </sec>
+      <sec id="s4d">
+        <title>3′-UTR dual luciferase assays of candidate miR-277 target mRNA</title>
+        <p>Drep-2 3′-UTR and Vimar 3′-UTR sequences were PCR-amplified directly from <italic>w<sup>1118</sup></italic> fly brain first-strand cDNA generated from 5 ug TRIZOL-isolated total RNA using oligo-dT SuperScript III reverse transcription according to the manufacture's protocol (Invitrogen; Cat. #1808-093). The PCR products were then cloned into psiCHECK-2 dual luciferase vector (Promega; Cat# C8021). The miR-277 target sites in the Drep-2 3′-UTR and Vimar 3′-UTR were deleted using QuikChange Site-Directed Mutagenesis Kits (Stratagene; Cat. #2000518). Target sites deletions were verified by Genewiz sequencing. Briefly, 293FT cells were co-transfected by Attractene transfection reagent (Qiagen; Cat. #301005) with psiCHECK-2-3′UTR or psiCHECK-2-3′ UTRΔmiR-277 and miR-277 duplex RNA (Qiagen; Cat# MSY0000338) or control miRNA duplex (Qiagen; Cat# 1027280). All co-transfections used a total of 600 ng of plasmid DNA and 120 nmol of duplex RNA. Luciferase expression was detected using the Dual-Luciferase Reporter 1000 System (Promega; Cat# E1980) according to the manufacturer's instructions. At 48 h after transfection, R-Luc activity was normalized to F-Luc activity to account for variation in transfection efficiencies, and miR-277-mediated knockdown of R-Luc activity was calculated as the ratio of normalized R-Luc activity in the miR-277 duplex treatments to normalized R-Luc activity in the negative control duplex treatments. Luciferase experiments were repeated three times.</p>
+      </sec>
+      <sec id="s4e">
+        <title>Chromatin immunoprecipitation (ChIP)</title>
+        <p>ChIP was performed using a ChIP Assay Kit (Millipore). S2 cells were cross-linked with 1% formaldehyde (Sigma-Aldrich) for 10 min at room temperature. Chromatin was fragmented to an average size of 500 bp by sonication (Sonicator 3000; Misonix) and immunoprecipitated with anti-Flag M2 antibody (sigma). Immunoprecipitated and purified DNA fragments were diluted to 1 ng/µl in nuclease-free water. We used 8 ng of DNA in 20-µl SYBR Green real-time PCR reactions consisting of 1× Power SYBR Green Master Mix and 0.5 µM forward and reverse primers. Reactions were run on an SDS 7500 Fast Instrument (Applied Biosystems). Primers were designed using Primer Express 3.0 software (Applied Biosystems) and were as follows. 4.5 kb upstream: forward, <named-content content-type="gene" xlink:type="simple">5′-CAGAAAACAGGCGTGCAAAC</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′-GAATTTGCATTGGCTTTGGAA</named-content>. 3.5 kb upstream: forward, <named-content content-type="gene" xlink:type="simple">5′- TTACAATTGGATGGGCTTCGT</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′-AAGCTGACGGCCTGACTAAAAA</named-content>. 2.5 kb upstream: forward, <named-content content-type="gene" xlink:type="simple">5′-GTTGGCTGCTGCGTCAATT</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′- GCCCCAGCGGCATTTATA</named-content>. 1.5 kb upstream: forward, <named-content content-type="gene" xlink:type="simple">5′- TTCTGGCACTGGCAGCTTT</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′- CATCGTGCTGGCCAACAC</named-content>. 1.0 kb upstream: forward, <named-content content-type="gene" xlink:type="simple">5′-TGTACGGGCATGTGTATGCA</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′- TCAACGAACACGCTGCGTAT</named-content>. 0.5 kb upstream: forward, <named-content content-type="gene" xlink:type="simple">5′- GGGCATTTTCATTTCATTCCA</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′- CGGGCAGCGTAATTTAAGCT</named-content>. 0.5 kb downstream: forward, <named-content content-type="gene" xlink:type="simple">5′- CGCCCACAAGAGCTTTTGA</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′- TTTCCACGGTATGCTGCTTTT</named-content>. 1.5 kb downstream: forward, <named-content content-type="gene" xlink:type="simple">5′- CGTTTCCATTTAGTTGGATTTTTGT</named-content>; and reverse, <named-content content-type="gene" xlink:type="simple">5′- GGCAAACCACACATTTTAACATACA</named-content>. DNA relative enrichment was determined by taking the absolute quantity ratios of specific IPs to nonspecific IPs (normal mouse IgG only), IP/IgG, and normalizing to control (pUAST only). Independent chromatins were prepared for all ChIP experiments, and real-time PCR reactions were performed in triplicate for each sample on each amplicon.</p>
+      </sec>
+      <sec id="s4f">
+        <title>Scanning electron microscopy</title>
+        <p>For scanning electron microscopy (SEM) images, whole flies were dehydrated in gradient concentration ethanol (25%, 50%, 75%, 100%), dried with hexamethyldisilazane (Sigma; Cat# 16700), and analyzed with an ISI DS-130 LaB6 SEM/STEM microscope.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors would like to thank J. Taylor of The Integrated Microscopy and Microanalytical Facility for her help with SEM, the members of the Jin lab for their assistance, and C. Strauss for critical reading of the manuscript.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pgen.1002681-Fu1">
+        <label>1</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Fu</surname><given-names>YH</given-names></name><name name-style="western"><surname>Kuhl</surname><given-names>DP</given-names></name><name name-style="western"><surname>Pizzuti</surname><given-names>A</given-names></name><name name-style="western"><surname>Pieretti</surname><given-names>M</given-names></name><name name-style="western"><surname>Sutcliffe</surname><given-names>JS</given-names></name><etal/></person-group>             <year>1991</year>             <article-title>Variation of the CGG repeat at the fragile X site results in genetic instability: resolution of the Sherman paradox.</article-title>             <source>Cell</source>             <volume>67</volume>             <fpage>1047</fpage>             <lpage>1058</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Kenneson1">
+        <label>2</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Kenneson</surname><given-names>A</given-names></name><name name-style="western"><surname>Zhang</surname><given-names>F</given-names></name><name name-style="western"><surname>Hagedorn</surname><given-names>CH</given-names></name><name name-style="western"><surname>Warren</surname><given-names>ST</given-names></name></person-group>             <year>2001</year>             <article-title>Reduced FMRP and increased FMR1 transcription is proportionally associated with CGG repeat number in intermediate-length and premutation carriers.</article-title>             <source>Hum Mol Genet</source>             <volume>10</volume>             <fpage>1449</fpage>             <lpage>1454</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Kremer1">
+        <label>3</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Kremer</surname><given-names>EJ</given-names></name><name name-style="western"><surname>Pritchard</surname><given-names>M</given-names></name><name name-style="western"><surname>Lynch</surname><given-names>M</given-names></name><name name-style="western"><surname>Yu</surname><given-names>S</given-names></name><name name-style="western"><surname>Holman</surname><given-names>K</given-names></name><etal/></person-group>             <year>1991</year>             <article-title>Mapping of DNA instability at the fragile X to a trinucleotide repeat sequence p(CCG)n.</article-title>             <source>Science</source>             <volume>252</volume>             <fpage>1711</fpage>             <lpage>1714</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Oberle1">
+        <label>4</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Oberle</surname><given-names>I</given-names></name><name name-style="western"><surname>Rousseau</surname><given-names>F</given-names></name><name name-style="western"><surname>Heitz</surname><given-names>D</given-names></name><name name-style="western"><surname>Kretz</surname><given-names>C</given-names></name><name name-style="western"><surname>Devys</surname><given-names>D</given-names></name><etal/></person-group>             <year>1991</year>             <article-title>Instability of a 550-base pair DNA segment and abnormal methylation in fragile X syndrome.</article-title>             <source>Science</source>             <volume>252</volume>             <fpage>1097</fpage>             <lpage>1102</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Pieretti1">
+        <label>5</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Pieretti</surname><given-names>M</given-names></name><name name-style="western"><surname>Zhang</surname><given-names>FP</given-names></name><name name-style="western"><surname>Fu</surname><given-names>YH</given-names></name><name name-style="western"><surname>Warren</surname><given-names>ST</given-names></name><name name-style="western"><surname>Oostra</surname><given-names>BA</given-names></name><etal/></person-group>             <year>1991</year>             <article-title>Absence of expression of the FMR-1 gene in fragile X syndrome.</article-title>             <source>Cell</source>             <volume>66</volume>             <fpage>817</fpage>             <lpage>822</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Verkerk1">
+        <label>6</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Verkerk</surname><given-names>AJ</given-names></name><name name-style="western"><surname>Pieretti</surname><given-names>M</given-names></name><name name-style="western"><surname>Sutcliffe</surname><given-names>JS</given-names></name><name name-style="western"><surname>Fu</surname><given-names>YH</given-names></name><name name-style="western"><surname>Kuhl</surname><given-names>DP</given-names></name><etal/></person-group>             <year>1991</year>             <article-title>Identification of a gene (FMR-1) containing a CGG repeat coincident with a breakpoint cluster region exhibiting length variation in fragile X syndrome.</article-title>             <source>Cell</source>             <volume>65</volume>             <fpage>905</fpage>             <lpage>914</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Sherman1">
+        <label>7</label>
+        <citation citation-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Sherman</surname><given-names>S</given-names></name></person-group>             <year>2002</year>             <article-title>Epidemiology.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name></person-group>             <source>Fragile X Syndrome: Diagnosis, Treatment and Research</source>             <publisher-loc>Baltimore, MD</publisher-loc>             <publisher-name>The Johns Hopkins University Press</publisher-name>             <fpage>136</fpage>             <lpage>168</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Hagerman1">
+        <label>8</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>PJ</given-names></name></person-group>             <year>2002</year>             <article-title>The fragile X premutation: into the phenotypic fold.</article-title>             <source>Curr Opin Genet Dev</source>             <volume>12</volume>             <fpage>278</fpage>             <lpage>283</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Hagerman2">
+        <label>9</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Hagerman</surname><given-names>PJ</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name></person-group>             <year>2004</year>             <article-title>The fragile-X premutation: a maturing perspective.</article-title>             <source>Am J Hum Genet</source>             <volume>74</volume>             <fpage>805</fpage>             <lpage>816</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Hagerman3">
+        <label>10</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Hagerman</surname><given-names>PJ</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name></person-group>             <year>2004</year>             <article-title>Fragile X-associated tremor/ataxia syndrome (FXTAS).</article-title>             <source>Ment Retard Dev Disabil Res Rev</source>             <volume>10</volume>             <fpage>25</fpage>             <lpage>30</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Greco1">
+        <label>11</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Greco</surname><given-names>CM</given-names></name><name name-style="western"><surname>Berman</surname><given-names>RF</given-names></name><name name-style="western"><surname>Martin</surname><given-names>RM</given-names></name><name name-style="western"><surname>Tassone</surname><given-names>F</given-names></name><name name-style="western"><surname>Schwartz</surname><given-names>PH</given-names></name><etal/></person-group>             <year>2006</year>             <article-title>Neuropathology of fragile X-associated tremor/ataxia syndrome (FXTAS).</article-title>             <source>Brain</source>             <volume>129</volume>             <fpage>243</fpage>             <lpage>255</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Iwahashi1">
+        <label>12</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Iwahashi</surname><given-names>CK</given-names></name><name name-style="western"><surname>Yasui</surname><given-names>DH</given-names></name><name name-style="western"><surname>An</surname><given-names>HJ</given-names></name><name name-style="western"><surname>Greco</surname><given-names>CM</given-names></name><name name-style="western"><surname>Tassone</surname><given-names>F</given-names></name><etal/></person-group>             <year>2006</year>             <article-title>Protein composition of the intranuclear inclusions of FXTAS.</article-title>             <source>Brain</source>             <volume>129</volume>             <fpage>256</fpage>             <lpage>271</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Greco2">
+        <label>13</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Greco</surname><given-names>CM</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name><name name-style="western"><surname>Tassone</surname><given-names>F</given-names></name><name name-style="western"><surname>Chudley</surname><given-names>AE</given-names></name><name name-style="western"><surname>Del Bigio</surname><given-names>MR</given-names></name><etal/></person-group>             <year>2002</year>             <article-title>Neuronal intranuclear inclusions in a new cerebellar tremor/ataxia syndrome among fragile X carriers.</article-title>             <source>Brain</source>             <volume>125</volume>             <fpage>1760</fpage>             <lpage>1771</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Jacquemont1">
+        <label>14</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Jacquemont</surname><given-names>S</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name><name name-style="western"><surname>Leehey</surname><given-names>MA</given-names></name><name name-style="western"><surname>Hall</surname><given-names>DA</given-names></name><name name-style="western"><surname>Levine</surname><given-names>RA</given-names></name><etal/></person-group>             <year>2004</year>             <article-title>Penetrance of the fragile X-associated tremor/ataxia syndrome in a premutation carrier population.</article-title>             <source>Jama</source>             <volume>291</volume>             <fpage>460</fpage>             <lpage>469</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Jin1">
+        <label>15</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Jin</surname><given-names>P</given-names></name><name name-style="western"><surname>Zarnescu</surname><given-names>DC</given-names></name><name name-style="western"><surname>Zhang</surname><given-names>F</given-names></name><name name-style="western"><surname>Pearson</surname><given-names>CE</given-names></name><name name-style="western"><surname>Lucchesi</surname><given-names>JC</given-names></name><etal/></person-group>             <year>2003</year>             <article-title>RNA-mediated neurodegeneration caused by the fragile X premutation rCGG repeats in Drosophila.</article-title>             <source>Neuron</source>             <volume>39</volume>             <fpage>739</fpage>             <lpage>747</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Tassone1">
+        <label>16</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Tassone</surname><given-names>F</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>RJ</given-names></name><name name-style="western"><surname>Taylor</surname><given-names>AK</given-names></name><name name-style="western"><surname>Gane</surname><given-names>LW</given-names></name><name name-style="western"><surname>Godfrey</surname><given-names>TE</given-names></name><etal/></person-group>             <year>2000</year>             <article-title>Elevated levels of FMR1 mRNA in carrier males: a new mechanism of involvement in the fragile-X syndrome.</article-title>             <source>Am J Hum Genet</source>             <volume>66</volume>             <fpage>6</fpage>             <lpage>15</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Willemsen1">
+        <label>17</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Willemsen</surname><given-names>R</given-names></name><name name-style="western"><surname>Hoogeveen-Westerveld</surname><given-names>M</given-names></name><name name-style="western"><surname>Reis</surname><given-names>S</given-names></name><name name-style="western"><surname>Holstege</surname><given-names>J</given-names></name><name name-style="western"><surname>Severijnen</surname><given-names>LA</given-names></name><etal/></person-group>             <year>2003</year>             <article-title>The FMR1 CGG repeat mouse displays ubiquitin-positive intranuclear neuronal inclusions; implications for the cerebellar tremor/ataxia syndrome.</article-title>             <source>Hum Mol Genet</source>             <volume>12</volume>             <fpage>949</fpage>             <lpage>959</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Hashem1">
+        <label>18</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Hashem</surname><given-names>V</given-names></name><name name-style="western"><surname>Galloway</surname><given-names>JN</given-names></name><name name-style="western"><surname>Mori</surname><given-names>M</given-names></name><name name-style="western"><surname>Willemsen</surname><given-names>R</given-names></name><name name-style="western"><surname>Oostra</surname><given-names>BA</given-names></name><etal/></person-group>             <year>2009</year>             <article-title>Ectopic expression of CGG containing mRNA is neurotoxic in mammals.</article-title>             <source>Hum Mol Genet</source>             <volume>18</volume>             <fpage>2443</fpage>             <lpage>2451</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Arocena1">
+        <label>19</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Arocena</surname><given-names>DG</given-names></name><name name-style="western"><surname>Iwahashi</surname><given-names>CK</given-names></name><name name-style="western"><surname>Won</surname><given-names>N</given-names></name><name name-style="western"><surname>Beilina</surname><given-names>A</given-names></name><name name-style="western"><surname>Ludwig</surname><given-names>AL</given-names></name><etal/></person-group>             <year>2005</year>             <article-title>Induction of inclusion formation and disruption of lamin A/C structure by premutation CGG-repeat RNA in human cultured neural cells.</article-title>             <source>Hum Mol Genet</source>             <volume>14</volume>             <fpage>3661</fpage>             <lpage>3671</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Tassone2">
+        <label>20</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Tassone</surname><given-names>F</given-names></name><name name-style="western"><surname>Iwahashi</surname><given-names>C</given-names></name><name name-style="western"><surname>Hagerman</surname><given-names>PJ</given-names></name></person-group>             <year>2004</year>             <article-title>FMR1 RNA within the intranuclear inclusions of fragile X-associated tremor/ataxia syndrome (FXTAS).</article-title>             <source>RNA Biology</source>             <volume>1</volume>             <fpage>103</fpage>             <lpage>105</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Sofola1">
+        <label>21</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Sofola</surname><given-names>OA</given-names></name><name name-style="western"><surname>Jin</surname><given-names>P</given-names></name><name name-style="western"><surname>Qin</surname><given-names>Y</given-names></name><name name-style="western"><surname>Duan</surname><given-names>R</given-names></name><name name-style="western"><surname>Liu</surname><given-names>H</given-names></name><etal/></person-group>             <year>2007</year>             <article-title>RNA-binding proteins hnRNP A2/B1 and CUGBP1 suppress fragile X CGG premutation repeat-induced neurodegeneration in a Drosophila model of FXTAS.</article-title>             <source>Neuron</source>             <volume>55</volume>             <fpage>565</fpage>             <lpage>571</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Jin2">
+        <label>22</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Jin</surname><given-names>P</given-names></name><name name-style="western"><surname>Duan</surname><given-names>R</given-names></name><name name-style="western"><surname>Qurashi</surname><given-names>A</given-names></name><name name-style="western"><surname>Qin</surname><given-names>Y</given-names></name><name name-style="western"><surname>Tian</surname><given-names>D</given-names></name><etal/></person-group>             <year>2007</year>             <article-title>Pur alpha binds to rCGG repeats and modulates repeat-mediated neurodegeneration in a Drosophila model of fragile X tremor/ataxia syndrome.</article-title>             <source>Neuron</source>             <volume>55</volume>             <fpage>556</fpage>             <lpage>564</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Bartel1">
+        <label>23</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Bartel</surname><given-names>DP</given-names></name><name name-style="western"><surname>Chen</surname><given-names>CZ</given-names></name></person-group>             <year>2004</year>             <article-title>Micromanagers of gene expression: the potentially widespread influence of metazoan microRNAs.</article-title>             <source>Nat Rev Genet</source>             <volume>5</volume>             <fpage>396</fpage>             <lpage>400</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Guo1">
+        <label>24</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Guo</surname><given-names>H</given-names></name><name name-style="western"><surname>Ingolia</surname><given-names>NT</given-names></name><name name-style="western"><surname>Weissman</surname><given-names>JS</given-names></name><name name-style="western"><surname>Bartel</surname><given-names>DP</given-names></name></person-group>             <year>2010</year>             <article-title>Mammalian microRNAs predominantly act to decrease target mRNA levels.</article-title>             <source>Nature</source>             <volume>466</volume>             <fpage>835</fpage>             <lpage>840</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Bushati1">
+        <label>25</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Bushati</surname><given-names>N</given-names></name><name name-style="western"><surname>Cohen</surname><given-names>SM</given-names></name></person-group>             <year>2008</year>             <article-title>MicroRNAs in neurodegeneration.</article-title>             <source>Curr Opin Neurobiol</source>             <volume>18</volume>             <fpage>292</fpage>             <lpage>296</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Baltimore1">
+        <label>26</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Baltimore</surname><given-names>D</given-names></name><name name-style="western"><surname>Boldin</surname><given-names>MP</given-names></name><name name-style="western"><surname>O'Connell</surname><given-names>RM</given-names></name><name name-style="western"><surname>Rao</surname><given-names>DS</given-names></name><name name-style="western"><surname>Taganov</surname><given-names>KD</given-names></name></person-group>             <year>2008</year>             <article-title>MicroRNAs: new regulators of immune cell development and function.</article-title>             <source>Nat Immunol</source>             <volume>9</volume>             <fpage>839</fpage>             <lpage>845</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-He1">
+        <label>27</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>He</surname><given-names>L</given-names></name><name name-style="western"><surname>He</surname><given-names>X</given-names></name><name name-style="western"><surname>Lowe</surname><given-names>SW</given-names></name><name name-style="western"><surname>Hannon</surname><given-names>GJ</given-names></name></person-group>             <year>2007</year>             <article-title>microRNAs join the p53 network–another piece in the tumour-suppression puzzle.</article-title>             <source>Nat Rev Cancer</source>             <volume>7</volume>             <fpage>819</fpage>             <lpage>822</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Chang1">
+        <label>28</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Chang</surname><given-names>TC</given-names></name><name name-style="western"><surname>Mendell</surname><given-names>JT</given-names></name></person-group>             <year>2007</year>             <article-title>microRNAs in vertebrate physiology and human disease.</article-title>             <source>Annu Rev Genomics Hum Genet</source>             <volume>8</volume>             <fpage>215</fpage>             <lpage>239</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Karp1">
+        <label>29</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Karp</surname><given-names>X</given-names></name><name name-style="western"><surname>Ambros</surname><given-names>V</given-names></name></person-group>             <year>2005</year>             <article-title>Developmental biology. Encountering microRNAs in cell fate signaling.</article-title>             <source>Science</source>             <volume>310</volume>             <fpage>1288</fpage>             <lpage>1289</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Giraldez1">
+        <label>30</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Giraldez</surname><given-names>AJ</given-names></name><name name-style="western"><surname>Cinalli</surname><given-names>RM</given-names></name><name name-style="western"><surname>Glasner</surname><given-names>ME</given-names></name><name name-style="western"><surname>Enright</surname><given-names>AJ</given-names></name><name name-style="western"><surname>Thomson</surname><given-names>JM</given-names></name><etal/></person-group>             <year>2005</year>             <article-title>MicroRNAs regulate brain morphogenesis in zebrafish.</article-title>             <source>Science</source>             <volume>308</volume>             <fpage>833</fpage>             <lpage>838</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Abbott1">
+        <label>31</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Abbott</surname><given-names>AL</given-names></name><name name-style="western"><surname>Alvarez-Saavedra</surname><given-names>E</given-names></name><name name-style="western"><surname>Miska</surname><given-names>EA</given-names></name><name name-style="western"><surname>Lau</surname><given-names>NC</given-names></name><name name-style="western"><surname>Bartel</surname><given-names>DP</given-names></name><etal/></person-group>             <year>2005</year>             <article-title>The let-7 MicroRNA family members mir-48, mir-84, and mir-241 function together to regulate developmental timing in Caenorhabditis elegans.</article-title>             <source>Dev Cell</source>             <volume>9</volume>             <fpage>403</fpage>             <lpage>414</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Krichevsky1">
+        <label>32</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Krichevsky</surname><given-names>AM</given-names></name><name name-style="western"><surname>Sonntag</surname><given-names>KC</given-names></name><name name-style="western"><surname>Isacson</surname><given-names>O</given-names></name><name name-style="western"><surname>Kosik</surname><given-names>KS</given-names></name></person-group>             <year>2006</year>             <article-title>Specific microRNAs modulate embryonic stem cell-derived neurogenesis.</article-title>             <source>Stem Cells</source>             <volume>24</volume>             <fpage>857</fpage>             <lpage>864</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Kosik1">
+        <label>33</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Kosik</surname><given-names>KS</given-names></name><name name-style="western"><surname>Krichevsky</surname><given-names>AM</given-names></name></person-group>             <year>2005</year>             <article-title>The Elegance of the MicroRNAs: A Neuronal Perspective.</article-title>             <source>Neuron</source>             <volume>47</volume>             <fpage>779</fpage>             <lpage>782</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Li1">
+        <label>34</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Li</surname><given-names>X</given-names></name><name name-style="western"><surname>Jin</surname><given-names>P</given-names></name></person-group>             <article-title>Roles of small regulatory RNAs in determining neuronal identity.</article-title>             <source>Nat Rev Neurosci</source>             <volume>11</volume>             <fpage>329</fpage>             <lpage>338</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Eacker1">
+        <label>35</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Eacker</surname><given-names>SM</given-names></name><name name-style="western"><surname>Dawson</surname><given-names>TM</given-names></name><name name-style="western"><surname>Dawson</surname><given-names>VL</given-names></name></person-group>             <year>2009</year>             <article-title>Understanding microRNAs in neurodegeneration.</article-title>             <source>Nat Rev Neurosci</source>             <volume>10</volume>             <fpage>837</fpage>             <lpage>841</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Kim1">
+        <label>36</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Kim</surname><given-names>J</given-names></name><name name-style="western"><surname>Inoue</surname><given-names>K</given-names></name><name name-style="western"><surname>Ishii</surname><given-names>J</given-names></name><name name-style="western"><surname>Vanti</surname><given-names>WB</given-names></name><name name-style="western"><surname>Voronov</surname><given-names>SV</given-names></name><etal/></person-group>             <year>2007</year>             <article-title>A MicroRNA feedback circuit in midbrain dopamine neurons.</article-title>             <source>Science</source>             <volume>317</volume>             <fpage>1220</fpage>             <lpage>1224</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Hebert1">
+        <label>37</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Hebert</surname><given-names>SS</given-names></name><name name-style="western"><surname>Horre</surname><given-names>K</given-names></name><name name-style="western"><surname>Nicolai</surname><given-names>L</given-names></name><name name-style="western"><surname>Papadopoulou</surname><given-names>AS</given-names></name><name name-style="western"><surname>Mandemakers</surname><given-names>W</given-names></name><etal/></person-group>             <year>2008</year>             <article-title>Loss of microRNA cluster miR-29a/b-1 in sporadic Alzheimer's disease correlates with increased BACE1/beta-secretase expression.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>105</volume>             <fpage>6415</fpage>             <lpage>6420</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Bilen1">
+        <label>38</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Bilen</surname><given-names>J</given-names></name><name name-style="western"><surname>Liu</surname><given-names>N</given-names></name><name name-style="western"><surname>Burnett</surname><given-names>BG</given-names></name><name name-style="western"><surname>Pittman</surname><given-names>RN</given-names></name><name name-style="western"><surname>Bonini</surname><given-names>NM</given-names></name></person-group>             <year>2006</year>             <article-title>MicroRNA pathways modulate polyglutamine-induced neurodegeneration.</article-title>             <source>Mol Cell</source>             <volume>24</volume>             <fpage>157</fpage>             <lpage>163</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Lee1">
+        <label>39</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Lee</surname><given-names>Y</given-names></name><name name-style="western"><surname>Samaco</surname><given-names>RC</given-names></name><name name-style="western"><surname>Gatchel</surname><given-names>JR</given-names></name><name name-style="western"><surname>Thaller</surname><given-names>C</given-names></name><name name-style="western"><surname>Orr</surname><given-names>HT</given-names></name><etal/></person-group>             <year>2008</year>             <article-title>miR-19, miR-101 and miR-130 co-regulate ATXN1 levels to potentially modulate SCA1 pathogenesis.</article-title>             <source>Nat Neurosci</source>             <volume>11</volume>             <fpage>1137</fpage>             <lpage>1139</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Packer1">
+        <label>40</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Packer</surname><given-names>AN</given-names></name><name name-style="western"><surname>Xing</surname><given-names>Y</given-names></name><name name-style="western"><surname>Harper</surname><given-names>SQ</given-names></name><name name-style="western"><surname>Jones</surname><given-names>L</given-names></name><name name-style="western"><surname>Davidson</surname><given-names>BL</given-names></name></person-group>             <year>2008</year>             <article-title>The bifunctional microRNA miR-9/miR-9* regulates REST and CoREST and is downregulated in Huntington's disease.</article-title>             <source>J Neurosci</source>             <volume>28</volume>             <fpage>14341</fpage>             <lpage>14346</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Yang1">
+        <label>41</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Yang</surname><given-names>Y</given-names></name><name name-style="western"><surname>Xu</surname><given-names>S</given-names></name><name name-style="western"><surname>Xia</surname><given-names>L</given-names></name><name name-style="western"><surname>Wang</surname><given-names>J</given-names></name><name name-style="western"><surname>Wen</surname><given-names>S</given-names></name><etal/></person-group>             <year>2009</year>             <article-title>The bantam microRNA is associated with drosophila fragile X mental retardation protein and regulates the fate of germline stem cells.</article-title>             <source>PLoS Genet</source>             <volume>5</volume>             <fpage>e1000444</fpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Ebert1">
+        <label>42</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Ebert</surname><given-names>MS</given-names></name><name name-style="western"><surname>Neilson</surname><given-names>JR</given-names></name><name name-style="western"><surname>Sharp</surname><given-names>PA</given-names></name></person-group>             <year>2007</year>             <article-title>MicroRNA sponges: competitive inhibitors of small RNAs in mammalian cells.</article-title>             <source>Nat Methods</source>             <volume>4</volume>             <fpage>721</fpage>             <lpage>726</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Loya1">
+        <label>43</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Loya</surname><given-names>CM</given-names></name><name name-style="western"><surname>Lu</surname><given-names>CS</given-names></name><name name-style="western"><surname>Van Vactor</surname><given-names>D</given-names></name><name name-style="western"><surname>Fulga</surname><given-names>TA</given-names></name></person-group>             <year>2009</year>             <article-title>Transgenic microRNA inhibition with spatiotemporal specificity in intact organisms.</article-title>             <source>Nat Methods</source>             <volume>6</volume>             <fpage>897</fpage>             <lpage>903</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Ruby1">
+        <label>44</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Ruby</surname><given-names>JG</given-names></name><name name-style="western"><surname>Jan</surname><given-names>CH</given-names></name><name name-style="western"><surname>Bartel</surname><given-names>DP</given-names></name></person-group>             <year>2007</year>             <article-title>Intronic microRNA precursors that bypass Drosha processing.</article-title>             <source>Nature</source>             <volume>448</volume>             <fpage>83</fpage>             <lpage>86</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Stark1">
+        <label>45</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Stark</surname><given-names>A</given-names></name><name name-style="western"><surname>Kheradpour</surname><given-names>P</given-names></name><name name-style="western"><surname>Parts</surname><given-names>L</given-names></name><name name-style="western"><surname>Brennecke</surname><given-names>J</given-names></name><name name-style="western"><surname>Hodges</surname><given-names>E</given-names></name><etal/></person-group>             <year>2007</year>             <article-title>Systematic discovery and characterization of fly microRNAs using 12 Drosophila genomes.</article-title>             <source>Genome Res</source>             <volume>17</volume>             <fpage>1865</fpage>             <lpage>1879</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Piacentini1">
+        <label>46</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Piacentini</surname><given-names>L</given-names></name><name name-style="western"><surname>Fanti</surname><given-names>L</given-names></name><name name-style="western"><surname>Negri</surname><given-names>R</given-names></name><name name-style="western"><surname>Del Vescovo</surname><given-names>V</given-names></name><name name-style="western"><surname>Fatica</surname><given-names>A</given-names></name><etal/></person-group>             <year>2009</year>             <article-title>Heterochromatin protein 1 (HP1a) positively regulates euchromatic gene expression through RNA transcript association and interaction with hnRNPs in Drosophila.</article-title>             <source>PLoS Genet</source>             <volume>5</volume>             <fpage>e1000670</fpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Pasquinelli1">
+        <label>47</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Pasquinelli</surname><given-names>AE</given-names></name></person-group>             <year>2002</year>             <article-title>MicroRNAs: deviants no longer.</article-title>             <source>Trends Genet</source>             <volume>18</volume>             <fpage>171</fpage>             <lpage>173</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Visvanathan1">
+        <label>48</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Visvanathan</surname><given-names>J</given-names></name><name name-style="western"><surname>Lee</surname><given-names>S</given-names></name><name name-style="western"><surname>Lee</surname><given-names>B</given-names></name><name name-style="western"><surname>Lee</surname><given-names>JW</given-names></name><name name-style="western"><surname>Lee</surname><given-names>SK</given-names></name></person-group>             <year>2007</year>             <article-title>The microRNA miR-124 antagonizes the anti-neural REST/SCP1 pathway during embryonic CNS development.</article-title>             <source>Genes Dev</source>             <volume>21</volume>             <fpage>744</fpage>             <lpage>749</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Li2">
+        <label>49</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Li</surname><given-names>X</given-names></name><name name-style="western"><surname>Jin</surname><given-names>P</given-names></name></person-group>             <year>2010</year>             <article-title>Roles of small regulatory RNAs in determining neuronal identity.</article-title>             <source>Nat Rev Neurosci</source>             <volume>11</volume>             <fpage>329</fpage>             <lpage>338</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Inohara1">
+        <label>50</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Inohara</surname><given-names>N</given-names></name><name name-style="western"><surname>Koseki</surname><given-names>T</given-names></name><name name-style="western"><surname>Chen</surname><given-names>S</given-names></name><name name-style="western"><surname>Wu</surname><given-names>X</given-names></name><name name-style="western"><surname>Nunez</surname><given-names>G</given-names></name></person-group>             <year>1998</year>             <article-title>CIDE, a novel family of cell death activators with homology to the 45 kDa subunit of the DNA fragmentation factor.</article-title>             <source>Embo J</source>             <volume>17</volume>             <fpage>2526</fpage>             <lpage>2533</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Inohara2">
+        <label>51</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Inohara</surname><given-names>N</given-names></name><name name-style="western"><surname>Nunez</surname><given-names>G</given-names></name></person-group>             <year>1999</year>             <article-title>Genes with homology to DFF/CIDEs found in Drosophila melanogaster.</article-title>             <source>Cell Death Differ</source>             <volume>6</volume>             <fpage>823</fpage>             <lpage>824</lpage>          </citation>
+      </ref>
+      <ref id="pgen.1002681-Chen1">
+        <label>52</label>
+        <citation citation-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Chen</surname><given-names>J</given-names></name><name name-style="western"><surname>Shi</surname><given-names>X</given-names></name><name name-style="western"><surname>Padmanabhan</surname><given-names>R</given-names></name><name name-style="western"><surname>Wang</surname><given-names>Q</given-names></name><name name-style="western"><surname>Wu</surname><given-names>Z</given-names></name><etal/></person-group>             <year>2008</year>             <article-title>Identification of novel modulators of mitochondrial function by a genome-wide RNAi screen in Drosophila melanogaster.</article-title>             <source>Genome Res</source>             <volume>18</volume>             <fpage>123</fpage>             <lpage>136</lpage>          </citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn fn-type="conflict">
+        <p>The authors have declared that no competing interests exist.</p>
+      </fn>
+      <fn fn-type="financial-disclosure">
+        <p>HT is supported by the China Scholarship Council. HL is supported by the National Natural Science Foundation of China 30430260 and 30225024. PJ is supported by NIH grants (R01 NS051630 and R21 NS067461). PJ is a recipient of the Beckman Young Investigator Award and the Basil O'Connor Scholar Research Award, as well as an Alfred P Sloan Research Fellow in Neuroscience. DC and PJ are supported by the National Natural Science Foundation of China 31028016. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
