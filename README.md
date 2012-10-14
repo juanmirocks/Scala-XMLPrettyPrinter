@@ -1,7 +1,5 @@
 # XMLPrettyPrinter
 
-Simple XML Pretty Printer for Scala Node
-
 Advantages over scala.xml.PrettyPrinter:
   1. You can both pretty-format a String or pretty-write directly to a file.
   2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
