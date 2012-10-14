@@ -11,6 +11,7 @@ import scala.xml.Node
 import scala.xml.SpecialNode
 import scala.xml.Text
 import scala.xml.dtd.DocType
+import java.io.Writer
 
 /**
  * XML Pretty Printer.
@@ -28,8 +29,8 @@ import scala.xml.dtd.DocType
  *
  *  3. Thread safe: you can have the same (global) object used by different clients in parallel.
  *  4. Not tested, but presumably more efficient in both speed and space
- *  
- *  
+ *
+ *
  *
  * @author Juan Miguel Cejuela
  *
@@ -47,9 +48,9 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    * Pretty-format the node as a String.
    */
   def format(node: Node): String = {
-    val buffer = SerializableBuffer()
-    print(node)(buffer)
-    buffer.toString
+    val out = stringWriter
+    print(node)(out)
+    out.toString
   }
 
   /**
@@ -59,16 +60,16 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    * If you would like to change these defaults, contact the developer.
    */
   def write(node: Node, docType: DocType = null)(file: File) {
-    val buffer = ClosableBuffer(file)
-    buffer write "<?xml version=\"1.0\" encoding=\""+UTF8+"\"?>"
-    buffer write ↵
+    val out = fileWriter(file)
+    out write "<?xml version=\"1.0\" encoding=\""+UTF8+"\"?>"
+    out write ↵
     if (null != docType) {
-      buffer write docType.toString
-      buffer write ↵
+      out write docType.toString
+      out write ↵
     }
 
-    print(node)(buffer)
-    buffer.close()
+    print(node)(out)
+    out.close()
   }
 
   /*---------------------------------------------------------------------------*/
@@ -97,11 +98,11 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     $(node.child)
   }
 
-  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit buffer: Buffer) {
+  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit out: Writer) {
     def whitespaceTrim(x: String) = x match { case CONTENT(c) => c }
     val preformatted = inPre || node.isInstanceOf[Group] || preSet.contains(node.label) //note, group.label fails
-    def ::(x: String) = buffer write x
-    def :::(x: Char) = buffer write x
+    def ::(x: String) = out write x
+    def :::(x: Char) = out write x
     def __ = (0 until curIndent).foreach(_ => :::(' '))
     def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int) { nodes.foreach(n => print(n, newScope, newIndent, preformatted)) }
 
@@ -133,7 +134,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /*---------------------------------------------------------------------------*/
 
-  //These functions were copied outright from scala.xml.{Utility, PrettyPrinter}
+  /** These functions were copied outright from [[scala.xml.{Utility, PrettyPrinter}]] */
 
   private def sbToString(f: (StringBuilder) => Unit): String = {
     val sb = new StringBuilder
@@ -163,31 +164,51 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /*---------------------------------------------------------------------------*/
 
-  private trait Buffer {
-    def write(x: String): Unit
-    def write(x: Char): Unit
-  }
-  private trait ClosableBuffer extends Buffer {
-    def close(): Unit
-  }
-  private object ClosableBuffer {
-    def apply(file: File) = new ClosableBuffer {
-      val bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), UTF8))
-      def write(x: String) { bw.write(x) }
-      def write(x: Char) { bw.write(x) }
-      def close() { bw.close() }
+  def fileWriter(file: File) =
+    new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), UTF8))
+
+  def stringWriter() = new StringBuilderWriter
+
+  /**
+   * Copy from [[org.apache.commons.io.output.StringBuilderWriter]]
+   * and translated to Scala without the unnecessary constructors.
+   */
+  class StringBuilderWriter extends Writer with Serializable {
+    val builder = new StringBuilder()
+
+    override def append(value: Char): Writer = {
+      builder.append(value);
+      this
     }
+
+    override def append(value: CharSequence): Writer = {
+      builder.append(value);
+      this;
+    }
+
+    override def append(value: CharSequence, start: Int, end: Int): Writer = {
+      builder.appendAll(value.toString().toCharArray(), start, end);
+      this;
+    }
+
+    def close() {}
+    def flush() {}
+
+    override def write(value: String) {
+      if (value != null) {
+        builder.append(value);
+      }
+    }
+
+    def write(value: Array[Char], offset: Int, length: Int) {
+      if (value != null) {
+        builder.append(value, offset, length);
+      }
+    }
+
+    def getBuilder: StringBuilder = builder
+
+    override def toString() = builder.toString()
   }
 
-  private trait SerializableBuffer extends Buffer {
-    override def toString(): String
-  }
-  private object SerializableBuffer {
-    def apply() = new SerializableBuffer {
-      val sb = new StringBuilder()
-      def write(x: String) { sb.append(x) }
-      def write(x: Char) { sb.append(x) }
-      override def toString() = sb.toString
-    }
-  }
 }
