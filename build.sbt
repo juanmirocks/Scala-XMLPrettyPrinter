@@ -5,7 +5,7 @@
  */
 name := "XMLPrettyPrinter"
 
-version := "0.1"
+version := "0.2"
 
 organization := "com.jmcejuela.scala.xml"
 

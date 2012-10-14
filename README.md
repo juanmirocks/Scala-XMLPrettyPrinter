@@ -1,4 +1,4 @@
-# XMLPrettyPrinter v0.1
+# XMLPrettyPrinter
 
 Simple XML Pretty Printer for Scala Node
 
