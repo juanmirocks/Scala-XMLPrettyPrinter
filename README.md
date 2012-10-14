@@ -1,4 +1,4 @@
-# XMLPrettyPrinter v0.1
+# XMLPrettyPrinter
 
 Simple XML Pretty Printer for Scala Node
 
@@ -9,8 +9,8 @@ Advantages over scala.xml.PrettyPrinter:
     All the other elements are completely stripped of leading & trailing whitespaces.
 
     Consider for instance [HTML-compatible XHTML documents](http://dev.w3.org/html5/html-xhtml-author-guide/)
-    You can have the same behaviour as with the HTML &lt;pre> tag.
-    You could also have inlined &lt;span>'s within a &lt;p>
+    You can have the same behavior as with the HTML &lt;pre> tag.
+    You could also have inlined &lt;span>'s within a &lt;p> without creating spurious break lines.
 
   3. Thread safe: you can have the same (global) object used by different clients in parallel.
   4. Not tested, but presumably more efficient in both speed and space
