@@ -152,7 +152,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     sbToString(mkStart)
   }
 
-  private def endTag(n: Node)(implicit buffer: Buffer): String = {
+  private def endTag(n: Node): String = {
     def mkEnd(sb: StringBuilder) {
       sb append </
       n nameToString sb
