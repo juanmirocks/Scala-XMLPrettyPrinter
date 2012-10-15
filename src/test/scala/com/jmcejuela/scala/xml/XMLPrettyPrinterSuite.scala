@@ -65,7 +65,7 @@ class XMLPrettyPrinterSuite extends FunSuite {
   }
 
   /*--------------------------------------------------------------------------*/
-  
+
   test("XML content remains the same after pretty-formatting") {
     testResources.foreach(resource => {
       val file = resourceFile(resource)
@@ -108,7 +108,7 @@ class XMLPrettyPrinterSuite extends FunSuite {
   def normalize(x: Node): String = normalize(x.toString)
   def normalize(x: String) = x.toString.replaceAll("\\s+", "")
 
-  class NotValidatingParserFactory extends SAXParserFactoryImpl() {
+  class NonValidatingParserFactory extends SAXParserFactoryImpl() {
     setFeature("http://xml.org/sax/features/validation", false);
     setFeature("http://apache.org/xml/features/disallow-doctype-decl", false);
     setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
@@ -117,14 +117,12 @@ class XMLPrettyPrinterSuite extends FunSuite {
 
   def XMLloadUTF8(file: File, validateSchema: Boolean = false) = {
     val parser =
-      (if (validateSchema) {
-        SAXParserFactory.newInstance.newSAXParser()
-      } else {
-        new NotValidatingParserFactory().newSAXParser()
-      })
+      if (validateSchema) SAXParserFactory.newInstance.newSAXParser()
+      else new NonValidatingParserFactory().newSAXParser()
 
     XML.loadXML(new InputSource(new InputStreamReader(new FileInputStream(file), "UTF-8")), parser)
   }
+  
   def resourceFile(resource: String) = new File(classOf[XMLPrettyPrinterSuite].getResource("/"+resource).toURI)
 
   def withTmpFile(name: String)(body: File => Unit) {
