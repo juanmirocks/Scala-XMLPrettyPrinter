@@ -22,12 +22,10 @@ EclipseKeys.withSource := true
 
 
 /** Publish */
-// publish to local maven
 publishTo := Some(Resolver.file("file", new File(Path.userHome.absolutePath+"/.m2/repository")))
 
 
 /** Repositories */
-// use local maven
 resolvers += "Local Maven Repository" at "file://" + (Path.userHome / ".m2" / "repository").absolutePath
 
 
