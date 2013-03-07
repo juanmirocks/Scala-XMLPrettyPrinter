@@ -83,7 +83,11 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   private val CONTENT: scala.util.matching.Regex = """(?s)\s*((?:\S.*\S)|\S|)\s*""".r
 
-  private def leavesText(node: Node) = {
+  /**
+   * Returns the appended text of the node's leaves (children) iff all children are text nodes
+   * (or text-like nodes such as Atom[String]). Otherwise return None. 
+   */
+  private def leavesText(node: Node): Option[String] = {
     val sb = new StringBuilder
     def $(children: Seq[Node]): Option[String] = {
       if (children.isEmpty) Some(sb.toString)
@@ -117,9 +121,9 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
           if (preformatted) {
             printNodes(node.child, node.scope, curIndent + indent)
           } else {
-            val leaves = leavesText(node).map(s => Some(whitespaceTrim(s))).getOrElse(None)
-            if (leaves.isDefined) {
-              ::(leaves.get)
+            val leavesTxt = leavesText(node).map(s => whitespaceTrim(s))
+            if (leavesTxt.isDefined) {
+              ::(leavesTxt.get)
             } else {
               ::(↵)
               printNodes(node.child, node.scope, curIndent + indent)
