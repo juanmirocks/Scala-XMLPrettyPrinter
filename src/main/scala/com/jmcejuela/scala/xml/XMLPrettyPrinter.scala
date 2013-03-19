@@ -85,7 +85,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /**
    * Returns the appended text of the node's leaves (children) iff all children are text nodes
-   * (or text-like nodes such as Atom[String]). Otherwise return None. 
+   * (or text-like nodes such as Atom[String]). Otherwise return None.
    */
   private def leavesText(node: Node): Option[String] = {
     val sb = new StringBuilder
