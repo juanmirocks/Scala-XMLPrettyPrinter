@@ -9,6 +9,9 @@ import java.io.FileInputStream
 import scala.xml.PrettyPrinter
 import scala.xml.Group
 import scala.xml.Text
+import scala.xml.XML
+import scala.xml.transform.RewriteRule
+import scala.xml.transform.RuleTransformer
 import javax.xml.parsers.SAXParserFactory
 import org.xml.sax.InputSource
 import com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
@@ -70,9 +73,13 @@ class XMLPrettyPrinterSuite extends FunSuite {
     testResources.foreach(resource => {
       val file = resourceFile(resource)
       val node = XMLloadUTF8(file)
+      val normalizedNode = normalize(node)
 
-      assert(normalize(node) === normalize(printer.format(node)))
-      assert(normalize(node) === normalize(printerWithPres.format(node)))
+      /* The formatted strings must be converted back to node for logical comparison.
+       * node.toString and printer.format may yield for nodes without children either
+       * <tag/> or <tag></tag>, xml-equivalent but different strings */
+      assert(normalizedNode === normalize(XML.loadString(printer.format(node))))
+      assert(normalizedNode === normalize(XML.loadString(printerWithPres.format(node))))
     })
   }
 
@@ -105,8 +112,18 @@ class XMLPrettyPrinterSuite extends FunSuite {
 
   /*--------------------------------------------------------------------------*/
 
-  def normalize(x: Node): String = normalize(x.toString)
-  def normalize(x: String) = x.toString.replaceAll("\\s+", "")
+  //Remove empty text nodes and trim all other text nodes
+  object normalize extends RuleTransformer(new RewriteRule() {
+    override def transform(n: Node): Seq[Node] = {
+      n.filter(e => e match {
+        case Text(text) if text.matches("\\s*") => false
+        case _ => true
+      }).map(e => e match {
+        case Text(text) => Text(text.trim)
+        case _ => e
+      })
+    }
+  })
 
   class NonValidatingParserFactory extends SAXParserFactoryImpl() {
     setFeature("http://xml.org/sax/features/validation", false);
