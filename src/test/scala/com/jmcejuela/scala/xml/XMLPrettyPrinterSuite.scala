@@ -24,13 +24,13 @@ class XMLPrettyPrinterSuite extends FunSuite {
     "journal.pgen.1002681.xml",
     "w3schools_example.xml",
     "w3schools_example_badlyformatted.xml")
-  
+
     /*--------------------------------------------------------------------------*/
-    
+
     /*
      * === DO NOT AUTO-FORMAT THIS REGION OF THE FILE ===
      */
-  
+
   test("XML pretty pre-formatting  :::  This is a NON-FORMAL, VISUAL-ONLY test !") {
     val n1 = 
       <notPre>
@@ -59,12 +59,12 @@ class XMLPrettyPrinterSuite extends FunSuite {
 </notPre>
 
 </notPre>
-      
-   
+
+
 
     println(printerWithPres.format(n1))
     println(printerWithPres.format(n2))
-      
+
   }
 
   /*--------------------------------------------------------------------------*/
@@ -139,7 +139,7 @@ class XMLPrettyPrinterSuite extends FunSuite {
 
     XML.loadXML(new InputSource(new InputStreamReader(new FileInputStream(file), "UTF-8")), parser)
   }
-  
+
   def resourceFile(resource: String) = new File(classOf[XMLPrettyPrinterSuite].getResource("/"+resource).toURI)
 
   def withTmpFile(name: String)(body: File => Unit) {
