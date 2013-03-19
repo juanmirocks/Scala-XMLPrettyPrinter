@@ -5,8 +5,10 @@
  */
 name := "XMLPrettyPrinter"
 
-//Remember: also change the version in XMLPrettyPrinter
+//Remember: also change the version in XMLPrettyPrinter.scala
 version := "0.2.1"
+
+scalaVersion := "2.10.1"
 
 organization := "com.jmcejuela.scala.xml"
 
@@ -20,6 +22,7 @@ EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Resource
 //sbteclipse: download dependency packages' sources if available
 EclipseKeys.withSource := true
 
+scalacOptions ++= Seq("-deprecation")
 
 /** Publish */
 publishTo := Some(Resolver.file("file", new File(Path.userHome.absolutePath+"/.m2/repository")))
@@ -31,7 +34,8 @@ resolvers += "Local Maven Repository" at "file://" + (Path.userHome / ".m2" / "r
 
 /** Dependencies */
 libraryDependencies ++= Seq(
-    /* Test */
-    "org.scalatest" %% "scalatest" % "2.0.M2" % "test"
-    /* Main */
+  /* Test */
+  "org.scalatest" % "scalatest_2.10" % "2.0.M5b" % "test"
+  //"org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
+  /* Main */
 )
