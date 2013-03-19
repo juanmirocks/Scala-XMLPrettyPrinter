@@ -206,7 +206,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
     def write(value: Array[Char], offset: Int, length: Int) {
       if (value != null) {
-        builder.append(value, offset, length);
+        builder.appendAll(value, offset, length);
       }
     }
 
