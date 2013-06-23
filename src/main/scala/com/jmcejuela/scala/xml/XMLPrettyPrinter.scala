@@ -92,9 +92,11 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
       if (children.isEmpty) Some(sb.toString)
       else {
         children.head match {
-          case s: Text                                   => sb append s.toString; $(children.tail)
-          case a: Atom[_] if a.data.isInstanceOf[String] => sb append a.toString; $(children.tail)
-          case _                                         => None
+          case s: Text =>
+            sb append s.toString; $(children.tail)
+          case a: Atom[_] if a.data.isInstanceOf[String] =>
+            sb append a.toString; $(children.tail)
+          case _ => None
         }
       }
     }
@@ -119,11 +121,13 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
         ::(startTag(node, pscope)); {
           if (preformatted) {
             printNodes(node.child, node.scope, curIndent + indent)
-          } else {
+          }
+          else {
             val leavesTxt = leavesText(node).map(s => whitespaceTrim(s))
             if (leavesTxt.isDefined) {
               ::(leavesTxt.get)
-            } else {
+            }
+            else {
               ::(↵)
               printNodes(node.child, node.scope, curIndent + indent)
               __
