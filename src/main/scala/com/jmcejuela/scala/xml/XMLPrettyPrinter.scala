@@ -61,7 +61,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    */
   def write(node: Node, docType: DocType = null)(file: File) {
     val out = fileWriter(file)
-    out write "<?xml version=\"1.0\" encoding=\""+UTF8+"\"?>"
+    out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
     out write ↵
     if (null != docType) {
       out write docType.toString
@@ -79,7 +79,6 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   private val </ = "</"
   private val /> = "/>"
   private val ↵ = System.getProperty("line.separator");
-  private val UTF8 = "UTF-8"
 
   private val CONTENT: scala.util.matching.Regex = """(?s)\s*((?:\S.*\S)|\S|)\s*""".r
 
@@ -169,7 +168,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   /*---------------------------------------------------------------------------*/
 
   def fileWriter(file: File) =
-    new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), UTF8))
+    new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
 
   def stringWriter() = new StringBuilderWriter
 
