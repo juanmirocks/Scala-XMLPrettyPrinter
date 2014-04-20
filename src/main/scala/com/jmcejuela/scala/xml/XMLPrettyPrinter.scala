@@ -56,13 +56,18 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   /**
    * Pretty-write the node to given file.
    *
-   * The file is written with UTF-8 encoding and the file will include an xml declaration.
-   * If you would like to change these defaults, contact the developer.
+   * @param node to write to file
+   * @param docType (optional, defaults to null) DocType to include (like <!DOCTYPE ...)
+   * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?> 
+   *
    */
-  def write(node: Node, docType: DocType = null)(file: File) {
+  def write(node: Node, docType: DocType = null, includeXmlDeclaration: Boolean = true)(file: File) {    
     val out = fileWriter(file)
-    out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
-    out write ↵
+    
+    if (includeXmlDeclaration) {
+      out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
+      out write ↵
+    }
     if (null != docType) {
       out write docType.toString
       out write ↵
