@@ -14,7 +14,7 @@ import scala.xml.dtd.DocType
 import java.io.Writer
 
 /**
- * XML Pretty Printer.
+ * # XML Pretty Printer.
  *
  * Advantages over scala.xml.PrettyPrinter:
  *
@@ -30,7 +30,11 @@ import java.io.Writer
  *  3. Thread safe: you can have the same (global) object used by different clients in parallel.
  *  4. Not tested, but presumably more efficient in both speed and space
  *
- *
+ * ## How to use
+ * 
+ * This file is self-contained and has no dependencies. 
+ * Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
+ * 
  *
  * @author Juan Miguel Cejuela
  * @version 0.2.1
