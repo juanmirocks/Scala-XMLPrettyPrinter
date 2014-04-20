@@ -8,7 +8,7 @@ name := "XMLPrettyPrinter"
 //Remember: also change the version in XMLPrettyPrinter.scala
 version := "0.2.1"
 
-scalaVersion := "2.10.1"
+scalaVersion := "2.10.3"
 
 organization := "com.jmcejuela.scala.xml"
 
@@ -35,7 +35,6 @@ resolvers += "Local Maven Repository" at "file://" + (Path.userHome / ".m2" / "r
 /** Dependencies */
 libraryDependencies ++= Seq(
   /* Test */
-  "org.scalatest" % "scalatest_2.10" % "2.0.M5b" % "test"
-  //"org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
+  "org.scalatest" % "scalatest_2.10" % "2.1.3" % "test"
   /* Main */
 )

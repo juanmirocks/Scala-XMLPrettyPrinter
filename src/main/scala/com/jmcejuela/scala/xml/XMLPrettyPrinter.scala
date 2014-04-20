@@ -14,23 +14,28 @@ import scala.xml.dtd.DocType
 import java.io.Writer
 
 /**
- * XML Pretty Printer.
+ * # XML Pretty Printer.
  *
  * Advantages over scala.xml.PrettyPrinter:
  *
- *  1. You can both pretty-format a String or pretty-write directly to a file.
- *  2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
+ * 1. You can both pretty-format a String or pretty-write directly to a file.
+ * 2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
  *    These are written exactly as they are read, with all the white spaces and new lines.
  *    All the other elements are completely stripped of leading & trailing whitespaces.
  *
- *    Consider for instance [[http://dev.w3.org/html5/html-xhtml-author-guide/ HTML-compatible XHTML documents]].
- *    You can have the same behavior as with the HTML <pre> tag.
+ *    Consider for instance [Polyglot Markup documents](http://dev.w3.org/html5/html-polyglot/html-polyglot.html).
+ *    You write in XML with the same behavior as with the HTML <pre> tag.
  *    You could also have inlined <span>'s within a <p> without creating spurious break lines.
  *
- *  3. Thread safe: you can have the same (global) object used by different clients in parallel.
- *  4. Not tested, but presumably more efficient in both speed and space
+ * 3. Thread safe: you can have the same (global) object used by different clients in parallel.
+ * 4. Not tested, but presumably more efficient in both speed and space
  *
  *
+ * ## How to use
+ * 
+ * This file is self-contained and has no dependencies. 
+ * Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
+ * 
  *
  * @author Juan Miguel Cejuela
  * @version 0.2.1
@@ -56,13 +61,18 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   /**
    * Pretty-write the node to given file.
    *
-   * The file is written with UTF-8 encoding and the file will include an xml declaration.
-   * If you would like to change these defaults, contact the developer.
+   * @param node to write to file
+   * @param docType (optional, defaults to null) DocType to include (like <!DOCTYPE ...)
+   * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?> 
+   *
    */
-  def write(node: Node, docType: DocType = null)(file: File) {
+  def write(node: Node, docType: DocType = null, addXmlDeclaration: Boolean = true)(file: File) {    
     val out = fileWriter(file)
-    out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
-    out write ↵
+    
+    if (addXmlDeclaration) {
+      out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
+      out write ↵
+    }
     if (null != docType) {
       out write docType.toString
       out write ↵
@@ -171,16 +181,16 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /*---------------------------------------------------------------------------*/
 
-  def fileWriter(file: File) =
+  private def fileWriter(file: File) =
     new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
 
-  def stringWriter() = new StringBuilderWriter
+  private def stringWriter() = new StringBuilderWriter
 
   /**
    * Copy from [[org.apache.commons.io.output.StringBuilderWriter]]
    * and translated to Scala without the unnecessary constructors.
    */
-  class StringBuilderWriter extends Writer with Serializable {
+  private class StringBuilderWriter extends Writer with Serializable {
     val builder = new StringBuilder()
 
     override def append(value: Char): Writer = {
