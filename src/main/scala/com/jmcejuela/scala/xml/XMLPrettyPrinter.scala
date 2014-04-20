@@ -61,10 +61,10 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?> 
    *
    */
-  def write(node: Node, docType: DocType = null, includeXmlDeclaration: Boolean = true)(file: File) {    
+  def write(node: Node, docType: DocType = null, addXmlDeclaration: Boolean = true)(file: File) {    
     val out = fileWriter(file)
     
-    if (includeXmlDeclaration) {
+    if (addXmlDeclaration) {
       out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
       out write ↵
     }
