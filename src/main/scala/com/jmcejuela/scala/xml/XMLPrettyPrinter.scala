@@ -14,26 +14,31 @@ import scala.xml.dtd.DocType
 import java.io.Writer
 
 /**
- * XML Pretty Printer.
+ * # XML Pretty Printer.
  *
  * Advantages over scala.xml.PrettyPrinter:
  *
- *  1. You can both pretty-format a String or pretty-write directly to a file.
- *  2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
+ * 1. You can both pretty-format a String or pretty-write directly to a file.
+ * 2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
  *    These are written exactly as they are read, with all the white spaces and new lines.
  *    All the other elements are completely stripped of leading & trailing whitespaces.
  *
- *    Consider for instance [[http://dev.w3.org/html5/html-xhtml-author-guide/ HTML-compatible XHTML documents]].
- *    You can have the same behavior as with the HTML <pre> tag.
+ *    Consider for instance [Polyglot Markup documents](http://dev.w3.org/html5/html-polyglot/html-polyglot.html).
+ *    You write in XML with the same behavior as with the HTML <pre> tag.
  *    You could also have inlined <span>'s within a <p> without creating spurious break lines.
  *
- *  3. Thread safe: you can have the same (global) object used by different clients in parallel.
- *  4. Not tested, but presumably more efficient in both speed and space
+ * 3. Thread safe: you can have the same (global) object used by different clients in parallel.
+ * 4. Not tested, but presumably more efficient in both speed and space
  *
  *
+ * ## How to use
+ * 
+ * This file is self-contained and has no dependencies. 
+ * Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
+ * 
  *
  * @author Juan Miguel Cejuela
- * @version 0.2
+ * @version 0.3.0
  *
  * @param indent: indentation space for a node's subnodes
  * @param pre: elements to be considered as pre-formatted
@@ -56,13 +61,18 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   /**
    * Pretty-write the node to given file.
    *
-   * The file is written with UTF-8 encoding and the file will include an xml declaration.
-   * If you would like to change these defaults, contact the developer.
+   * @param node to write to file
+   * @param docType (optional, defaults to null) DocType to include (like <!DOCTYPE ...)
+   * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?> 
+   *
    */
-  def write(node: Node, docType: DocType = null)(file: File) {
+  def write(node: Node, docType: DocType = null, addXmlDeclaration: Boolean = true)(file: File) {    
     val out = fileWriter(file)
-    out write "<?xml version=\"1.0\" encoding=\""+UTF8+"\"?>"
-    out write ↵
+    
+    if (addXmlDeclaration) {
+      out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
+      out write ↵
+    }
     if (null != docType) {
       out write docType.toString
       out write ↵
@@ -79,19 +89,24 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   private val </ = "</"
   private val /> = "/>"
   private val ↵ = System.getProperty("line.separator");
-  private val UTF8 = "UTF-8"
 
   private val CONTENT: scala.util.matching.Regex = """(?s)\s*((?:\S.*\S)|\S|)\s*""".r
 
-  private def leavesText(node: Node) = {
+  /**
+   * Returns the appended text of the node's leaves (children) iff all children are text nodes
+   * (or text-like nodes such as Atom[String]). Otherwise return None.
+   */
+  private def leavesText(node: Node): Option[String] = {
     val sb = new StringBuilder
     def $(children: Seq[Node]): Option[String] = {
       if (children.isEmpty) Some(sb.toString)
       else {
         children.head match {
-          case s: Text                                   => sb append s.toString; $(children.tail)
-          case a: Atom[_] if a.data.isInstanceOf[String] => sb append a.toString; $(children.tail)
-          case _                                         => None
+          case s: Text =>
+            sb append s.toString; $(children.tail)
+          case a: Atom[_] if a.data.isInstanceOf[String] =>
+            sb append a.toString; $(children.tail)
+          case _ => None
         }
       }
     }
@@ -116,11 +131,13 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
         ::(startTag(node, pscope)); {
           if (preformatted) {
             printNodes(node.child, node.scope, curIndent + indent)
-          } else {
-            val leaves = leavesText(node).map(s => Some(whitespaceTrim(s))).getOrElse(None)
-            if (leaves.isDefined) {
-              ::(leaves.get)
-            } else {
+          }
+          else {
+            val leavesTxt = leavesText(node).map(s => whitespaceTrim(s))
+            if (leavesTxt.isDefined) {
+              ::(leavesTxt.get)
+            }
+            else {
               ::(↵)
               printNodes(node.child, node.scope, curIndent + indent)
               __
@@ -164,16 +181,16 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /*---------------------------------------------------------------------------*/
 
-  def fileWriter(file: File) =
-    new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), UTF8))
+  private def fileWriter(file: File) =
+    new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
 
-  def stringWriter() = new StringBuilderWriter
+  private def stringWriter() = new StringBuilderWriter
 
   /**
    * Copy from [[org.apache.commons.io.output.StringBuilderWriter]]
    * and translated to Scala without the unnecessary constructors.
    */
-  class StringBuilderWriter extends Writer with Serializable {
+  private class StringBuilderWriter extends Writer with Serializable {
     val builder = new StringBuilder()
 
     override def append(value: Char): Writer = {
@@ -202,7 +219,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
     def write(value: Array[Char], offset: Int, length: Int) {
       if (value != null) {
-        builder.append(value, offset, length);
+        builder.appendAll(value, offset, length);
       }
     }
 
