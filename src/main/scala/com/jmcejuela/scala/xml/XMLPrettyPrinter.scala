@@ -90,8 +90,6 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   private val /> = "/>"
   private val ↵ = System.getProperty("line.separator");
 
-  private val CONTENT: scala.util.matching.Regex = """(?s)\s*((?:\S.*\S)|\S|)\s*""".r
-
   /**
    * Returns the appended text of the node's leaves (children) iff all children are text nodes
    * (or text-like nodes such as Atom[String]). Otherwise return None.
@@ -114,7 +112,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit out: Writer): Unit = {
-    def whitespaceTrim(x: String) = x match { case CONTENT(c) => c }
+    def whitespaceTrim(x: String) = x.trim
     val preformatted = inPre || node.isInstanceOf[Group] || preSet.contains(node.label) //note, group.label fails
     def ::(x: String): Unit = out write x
     def :::(x: Char): Unit = out write x
