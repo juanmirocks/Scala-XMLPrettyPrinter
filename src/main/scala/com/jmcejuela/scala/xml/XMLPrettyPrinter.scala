@@ -32,10 +32,10 @@ import java.io.Writer
  *
  *
  * ## How to use
- * 
- * XMLPrettyPrinter is self-contained and has no dependencies. 
+ *
+ * XMLPrettyPrinter is self-contained and has no dependencies.
  * Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
- * 
+ *
  *
  * @author Juan Miguel Cejuela
  * @version 0.3.0
@@ -63,12 +63,12 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    *
    * @param node to write to file
    * @param docType (optional, defaults to null) DocType to include (like <!DOCTYPE ...)
-   * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?> 
+   * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?>
    *
    */
-  def write(node: Node, docType: DocType = null, addXmlDeclaration: Boolean = true)(file: File) {    
+  def write(node: Node, docType: DocType = null, addXmlDeclaration: Boolean = true)(file: File): Unit = {
     val out = fileWriter(file)
-    
+
     if (addXmlDeclaration) {
       out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
       out write ↵
@@ -113,13 +113,15 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     $(node.child)
   }
 
-  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit out: Writer) {
+  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit out: Writer): Unit = {
     def whitespaceTrim(x: String) = x match { case CONTENT(c) => c }
     val preformatted = inPre || node.isInstanceOf[Group] || preSet.contains(node.label) //note, group.label fails
-    def ::(x: String) = out write x
-    def :::(x: Char) = out write x
-    def __ = (0 until curIndent).foreach(_ => :::(' '))
-    def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int) { nodes.foreach(n => print(n, newScope, newIndent, preformatted)) }
+    def ::(x: String): Unit = out write x
+    def :::(x: Char): Unit = out write x
+    def __ : Unit = (0 until curIndent).foreach(_ => :::(' '))
+    def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int): Unit = {
+      nodes.foreach(n => print(n, newScope, newIndent, preformatted))
+    }
 
     node match {
       case _: SpecialNode =>
@@ -128,7 +130,12 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
       case Group(group) => printNodes(group, pscope, curIndent)
       case _ =>
         if (!inPre) __
-        ::(startTag(node, pscope)); {
+
+        if (node.child.isEmpty) {
+          ::(leafTag(node))
+        }
+        else {
+          ::(startTag(node, pscope))
           if (preformatted) {
             printNodes(node.child, node.scope, curIndent + indent)
           }
@@ -143,8 +150,9 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
               __
             }
           }
+          ::(endTag(node))
         }
-        ::(endTag(node))
+
         if (!inPre) ::(↵)
     }
   }
@@ -157,6 +165,16 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     val sb = new StringBuilder
     f(sb)
     sb.toString
+  }
+
+  private def leafTag(n: Node): String = {
+    def mkLeaf(sb: StringBuilder) {
+      sb append <
+      n nameToString sb
+      n.attributes buildString sb
+      sb append />
+    }
+    sbToString(mkLeaf)
   }
 
   private def startTag(n: Node, pScope: NamespaceBinding): String = {
@@ -181,10 +199,10 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /*---------------------------------------------------------------------------*/
 
-  private def fileWriter(file: File) =
+  private def fileWriter(file: File): Writer =
     new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
 
-  private def stringWriter() = new StringBuilderWriter
+  private def stringWriter(): Writer = new StringBuilderWriter
 
   /**
    * Copy from [[org.apache.commons.io.output.StringBuilderWriter]]
