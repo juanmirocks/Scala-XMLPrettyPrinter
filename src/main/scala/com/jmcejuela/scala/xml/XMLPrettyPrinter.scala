@@ -180,16 +180,16 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   /*---------------------------------------------------------------------------*/
 
-  def fileWriter(file: File) =
+  private def fileWriter(file: File) =
     new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
 
-  def stringWriter() = new StringBuilderWriter
+  private def stringWriter() = new StringBuilderWriter
 
   /**
    * Copy from [[org.apache.commons.io.output.StringBuilderWriter]]
    * and translated to Scala without the unnecessary constructors.
    */
-  class StringBuilderWriter extends Writer with Serializable {
+  private class StringBuilderWriter extends Writer with Serializable {
     val builder = new StringBuilder()
 
     override def append(value: Char): Writer = {
