@@ -25,7 +25,13 @@ class XMLPrettyPrinterSuite extends FunSuite {
     "w3schools_example.xml",
     "w3schools_example_badlyformatted.xml")
 
-    /*--------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------*/
+
+  test("Minimized/void elements remain minimized") {
+    assert("<p/>\n" === printer.format(<p/>))
+    assert("<p class=\"something\"/>\n" === printer.format(<p class="something"/>))
+    assert("<p class=\"something\"/>\n" === printerWithPres.format(<p class="something"/>))
+  }
 
     /*
      * === DO NOT AUTO-FORMAT THIS REGION OF THE FILE ===
