@@ -24,7 +24,7 @@ import java.io.Writer
  *    All the other elements are completely stripped of leading & trailing whitespaces.
  *
  * Consider for instance [Polyglot Markup documents](http://dev.w3.org/html5/html-polyglot/html-polyglot.html).
- * You write in XML with the same behavior as with the HTML <pre> tag.
+ * You can write in XML with the same behavior as with the HTML <pre> tag.
  * You could also have inlined <span>'s within a <p> without creating spurious break lines.
  *
  * 3. Thread safe: you can have the same (global) object used by different clients in parallel.
