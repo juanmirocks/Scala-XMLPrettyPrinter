@@ -1,14 +1,8 @@
-/**
- * Project
- *
- * sbt documentation: https://github.com/harrah/xsbt/wiki
- */
 name := "XMLPrettyPrinter"
 
-//Remember: also change the version in XMLPrettyPrinter.scala
-version := "0.3.1"
+version := "0.4.0" //Remember: also change the version in XMLPrettyPrinter.scala
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
 organization := "com.jmcejuela.scala.xml"
 
@@ -35,6 +29,6 @@ resolvers += "Local Maven Repository" at "file://" + (Path.userHome / ".m2" / "r
 /** Dependencies */
 libraryDependencies ++= Seq(
   /* Test */
-  "org.scalatest" % "scalatest_2.10" % "2.1.3" % "test"
+  "org.scalatest" %% "scalatest" % "2.2.1" % "test"
   /* Main */
 )
