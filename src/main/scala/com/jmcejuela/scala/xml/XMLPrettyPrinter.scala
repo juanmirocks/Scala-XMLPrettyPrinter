@@ -54,7 +54,7 @@ import java.io.Writer
  *
  *
  * @author Juan Miguel Cejuela
- * @version 0.4.0
+ * @version 1.0.0
  *
  * @param indent: indentation space for a node's subnodes
  * @param pre: elements to be considered as pre-formatted
