@@ -2,7 +2,7 @@ name := "XMLPrettyPrinter"
 
 version := "0.4.0" //Remember: also change the version in XMLPrettyPrinter.scala
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.11.6"
 
 organization := "com.jmcejuela.scala.xml"
 
