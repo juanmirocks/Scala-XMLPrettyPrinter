@@ -17,5 +17,14 @@ You could also have inlined `<span>`'s within a `<p>` without creating spurious 
 
 ## How to use
 
-XMLPrettyPrinter is self-contained and has no dependencies.
+XMLPrettyPrinter is self-contained and has no dependencies (see below for scala 2.11).
+
 Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
+
+### 2.11.x
+
+You do need to explicitly add the standard [scala-xml module](https://github.com/scala/scala-xml) as dependency, as with:
+
+```scala
+libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.3"
+```
