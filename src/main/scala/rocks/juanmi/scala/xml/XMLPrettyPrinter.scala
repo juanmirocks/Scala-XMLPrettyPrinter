@@ -1,7 +1,7 @@
 package rocks.juanmi.scala.xml
 
 /**
-   Copyright 2015 Juan Miguel Cejuela
+   Copyright Juan Miguel Cejuela (@juanmirocks)
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -53,8 +53,8 @@ import java.io.Writer
  * Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
  *
  *
- * @author Juan Miguel Cejuela
- * @version 1.0.0
+ * @author Juan Miguel Cejuela (@juanmirocks)
+ * @version 2.0.0
  *
  * @param indent: indentation space for a node's subnodes
  * @param pre: elements to be considered as pre-formatted
