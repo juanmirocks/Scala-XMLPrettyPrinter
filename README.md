@@ -1,6 +1,6 @@
 # XMLPrettyPrinter
 
-Advantages over scala.xml.PrettyPrinter:
+Advantages over `scala.xml.PrettyPrinter`:
 
 1. You can both pretty-format a String or pretty-write directly to a file.
 2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
@@ -19,4 +19,4 @@ You could also have inlined `<span>`'s within a `<p>` without creating spurious 
 
 XMLPrettyPrinter is self-contained and has no dependencies.
 
-Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
+Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop into your project.
