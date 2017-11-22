@@ -16,7 +16,7 @@ package rocks.juanmi.scala.xml
  * limitations under the License.
  */
 
-import java.io.{BufferedWriter, File, FileOutputStream, OutputStreamWriter, Writer}
+import java.io.{BufferedWriter, File, FileOutputStream, OutputStream, OutputStreamWriter, Writer}
 
 import scala.xml.{Atom, Group, NamespaceBinding, Node, SpecialNode, Text}
 import scala.xml.dtd.DocType
@@ -52,16 +52,18 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   /**
-   * Pretty-write the node to given file.
+   * Pretty-write the node to given Writer.
    *
-   * @param node to write to file
+   * The client is responsible to close the writer.
+   *
+   * @param out Writer to write to
+   *
+   * @param node to write
    * @param docType (optional, defaults to null) DocType to include (like <!DOCTYPE ...)
    * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?>
    *
    */
-  def write(node: Node, docType: DocType = null, addXmlDeclaration: Boolean = true)(file: File): Unit = {
-    val out = fileWriter(file)
-
+  def write(docType: DocType, addXmlDeclaration: Boolean)(out: Writer)(node: Node): Unit = {
     if (addXmlDeclaration) {
       out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
       out write ↵
@@ -72,8 +74,19 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     }
 
     print(node)(out)
-    out.close()
   }
+
+  def writeToFile(file: File, docType: DocType = null, addXmlDeclaration: Boolean = true): Node => Unit =
+    withCloseable(fileWriter(file)) { out =>
+      write(docType, addXmlDeclaration)(out) _
+    }
+
+  def writeToOutputStream(outputStream: OutputStream,
+                          docType: DocType = null,
+                          addXmlDeclaration: Boolean = true): Node => Unit =
+    withCloseable(outputStreamWriter(outputStream)) { out =>
+      write(docType, addXmlDeclaration)(out) _
+    }
 
   //---------------------------------------------------------------------------
 
@@ -191,10 +204,29 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
   //---------------------------------------------------------------------------
 
+  /*
+   * The following are utility functions.
+   */
+
+  /**
+   * Work with a closeable object/resource (e.g., an InputStream) in a safe manner,
+   * that is, always making sure that the object/resource is finally closed.
+   */
+  private def withCloseable[In <: { def close(): Unit }, Out](obj: In)(f: In => Out): Out =
+    try {
+      f(obj)
+    } finally {
+      obj.close()
+    }
+
+  private def outputStreamWriter(outputStream: OutputStream): Writer =
+    new BufferedWriter(new OutputStreamWriter(outputStream, scala.io.Codec.UTF8.toString))
+
   private def fileWriter(file: File): Writer =
     new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
 
-  private def stringWriter(): Writer = new StringBuilderWriter
+  private def stringWriter(): Writer =
+    new StringBuilderWriter
 
   /**
    * Copy from [[org.apache.commons.io.output.StringBuilderWriter]]
