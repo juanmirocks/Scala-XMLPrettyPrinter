@@ -1,6 +1,6 @@
 organization := "rocks.juanmi"
 name := "XMLPrettyPrinter"
-version := "2.0.0" //Remember: also change the version in XMLPrettyPrinter.scala
+version := "2.1.0" //Remember: also change the version in XMLPrettyPrinter.scala
 
 //-------------------------------------------------------------------------
 
@@ -26,5 +26,5 @@ scalacOptions ++= Seq(
 )
 
 scalafmtOnCompile := true
-scalafmtTestOnCompile := false
+scalafmtOnCompile in Test := false
 scalafmtVersion := "1.3.0"
