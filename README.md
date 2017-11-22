@@ -40,6 +40,4 @@ You could also have inlined `<span>`'s within a `<p>` without creating spurious 
 libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.6"
 ```
 
-2. Drop the single-file code into your project
-
-[Code](src/main/scala/rocks/juanmi/scala/xml/XMLPrettyPrinter.scala)
+2. Drop the [single-file code](src/main/scala/rocks/juanmi/scala/xml/XMLPrettyPrinter.scala) into your project
