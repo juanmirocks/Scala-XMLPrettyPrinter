@@ -1,6 +1,6 @@
-# XMLPrettyPrinter
+# XMLPrettyPrinter ✨
 
-Advantages over scala.xml.PrettyPrinter:
+Advantages over `scala.xml.PrettyPrinter`:
 
 1. You can both pretty-format a String or pretty-write directly to a file.
 2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
@@ -14,8 +14,30 @@ You could also have inlined `<span>`'s within a `<p>` without creating spurious 
 3. Thread safe: you can have the same (global) object used by different clients in parallel.
 4. Not tested, but presumably more efficient in both speed and space
 
+## Output Example
+
+```xml
+<notPre>
+  <!-- pre-formatting pretty-printing test (this comment should be aligned)-->
+  <pre>         ....      </pre>
+  <notPre>
+    <span>child span</span>
+    <!-- another comment -->
+    <pre>   !!!  an <span>inlined span</span> doesn't get broken and can have<span> spaces!!   </span><span>🙂</span></pre>
+    <span>child span with specials: &gt; &amp; ; &lt;pio&gt;*&lt;/pio&gt; &lt;!-- ? --&gt;</span>
+  </notPre>
+</notPre>
+```
+
 
 ## How to use
 
-XMLPrettyPrinter is self-contained and has no dependencies.
-Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
+`XMLPrettyPrinter` is self-contained and has no dependencies other than the standard [scala-xml](https://github.com/scala/scala-xml) library.
+
+1. Make sure you have `scala-xml` available in your project.
+
+```scala
+libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.6"
+```
+
+2. Drop the [single-file code](src/main/scala/rocks/juanmi/scala/xml/XMLPrettyPrinter.scala) into your project

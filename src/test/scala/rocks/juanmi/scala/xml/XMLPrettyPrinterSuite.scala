@@ -1,4 +1,4 @@
-package com.jmcejuela.scala.xml
+package rocks.juanmi.scala.xml
 
 import org.scalatest.FunSuite
 import scala.xml.Node

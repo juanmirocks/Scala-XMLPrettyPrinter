@@ -1,60 +1,37 @@
-package com.jmcejuela.scala.xml
+package rocks.juanmi.scala.xml
 
-/**
-   Copyright 2015 Juan Miguel Cejuela
+/*
+ * Copyright Juan Miguel Cejuela (@juanmirocks)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+import java.io.{BufferedWriter, File, FileOutputStream, OutputStreamWriter, Writer}
 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-   */
-
-import java.io.BufferedWriter
-import java.io.File
-import java.io.FileOutputStream
-import java.io.OutputStreamWriter
-import scala.xml.Atom
-import scala.xml.Group
-import scala.xml.NamespaceBinding
-import scala.xml.Node
-import scala.xml.SpecialNode
-import scala.xml.Text
+import scala.xml.{Atom, Group, NamespaceBinding, Node, SpecialNode, Text}
 import scala.xml.dtd.DocType
-import java.io.Writer
 
 /**
- * # XMLPrettyPrinter
+ * Utility to pretty-print Standard Scala XML.
  *
- * Advantages over scala.xml.PrettyPrinter:
- *
- * 1. You can both pretty-format a String or pretty-write directly to a file.
- * 2. pre-formatted elements: specify which nodes you want to be considered as pre-formatted.
- *    These are written exactly as they are read, with all the white spaces and new lines.
- *    All the other elements are completely stripped of leading & trailing whitespaces.
- *
- * Consider for instance [Polyglot Markup documents](http://dev.w3.org/html5/html-polyglot/html-polyglot.html).
- * You can write in XML with the same behavior as with the HTML <pre> tag.
- * You could also have inlined <span>'s within a <p> without creating spurious break lines.
- *
- * 3. Thread safe: you can have the same (global) object used by different clients in parallel.
- * 4. Not tested, but presumably more efficient in both speed and space
+ * Specially useful to have beautifully-formatted HTMLs or XHTMLs. You can pretty-print a scala (XML) Node to String or
+ * directly write it to a File for better efficiency.
  *
  *
- * ## How to use
+ * More info: https://github.com/juanmirocks/Scala-XML-Pretty-Printer
  *
- * XMLPrettyPrinter is self-contained and has no dependencies.
- * Copy the [code](https://github.com/jmcejuela/Scala-XML-Pretty-Printer/blob/master/src/main/scala/com/jmcejuela/scala/xml/XMLPrettyPrinter.scala) and drop in to your project.
- *
- *
- * @author Juan Miguel Cejuela
- * @version 1.0.0
+ * @author Juan Miguel Cejuela (@juanmirocks)
+ * @version 2.0.0
  *
  * @param indent: indentation space for a node's subnodes
  * @param pre: elements to be considered as pre-formatted
@@ -98,7 +75,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     out.close()
   }
 
-  /*---------------------------------------------------------------------------*/
+  //---------------------------------------------------------------------------
 
   private val < = '<'
   private val > = '>'
@@ -112,7 +89,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    */
   private def leavesText(node: Node): Option[String] = {
     val sb = new StringBuilder
-    def $(children: Seq[Node]): Option[String] = {
+    def $(children: Seq[Node]): Option[String] =
       if (children.isEmpty) Some(sb.toString)
       else {
         children.head match {
@@ -123,19 +100,18 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
           case _ => None
         }
       }
-    }
     $(node.child)
   }
 
-  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit out: Writer): Unit = {
+  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(
+      implicit out: Writer): Unit = {
     def whitespaceTrim(x: String) = x.trim
     val preformatted = inPre || node.isInstanceOf[Group] || preSet.contains(node.label) //note, group.label fails
     def ::(x: String): Unit = out write x
     def :::(x: Char): Unit = out write x
     def __ : Unit = (0 until curIndent).foreach(_ => :::(' '))
-    def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int): Unit = {
+    def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int): Unit =
       nodes.foreach(n => print(n, newScope, newIndent, preformatted))
-    }
 
     node match {
       case _: SpecialNode =>
@@ -171,9 +147,11 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     }
   }
 
-  /*---------------------------------------------------------------------------*/
+  //---------------------------------------------------------------------------
 
-  /** These functions were copied outright from [[scala.xml.{Utility, PrettyPrinter}]] */
+  /*
+   * The following functions were copied outright from [[scala.xml.{Utility, PrettyPrinter}]]
+   */
 
   private def sbToString(f: (StringBuilder) => Unit): String = {
     val sb = new StringBuilder
@@ -182,7 +160,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def leafTag(n: Node): String = {
-    def mkLeaf(sb: StringBuilder) {
+    def mkLeaf(sb: StringBuilder): Unit = {
       sb append <
       n nameToString sb
       n.attributes buildString sb
@@ -192,7 +170,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def startTag(n: Node, pScope: NamespaceBinding): String = {
-    def mkStart(sb: StringBuilder) {
+    def mkStart(sb: StringBuilder): Unit = {
       sb append <
       n nameToString sb
       n.attributes buildString sb
@@ -203,7 +181,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def endTag(n: Node): String = {
-    def mkEnd(sb: StringBuilder) {
+    def mkEnd(sb: StringBuilder): Unit = {
       sb append </
       n nameToString sb
       sb append >
@@ -211,7 +189,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     sbToString(mkEnd)
   }
 
-  /*---------------------------------------------------------------------------*/
+  //---------------------------------------------------------------------------
 
   private def fileWriter(file: File): Writer =
     new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
@@ -240,20 +218,19 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
       this;
     }
 
-    def close() {}
-    def flush() {}
+    def close(): Unit = {}
 
-    override def write(value: String) {
+    def flush(): Unit = {}
+
+    override def write(value: String): Unit =
       if (value != null) {
         builder.append(value);
       }
-    }
 
-    def write(value: Array[Char], offset: Int, length: Int) {
+    def write(value: Array[Char], offset: Int, length: Int): Unit =
       if (value != null) {
         builder.appendAll(value, offset, length);
       }
-    }
 
     def getBuilder: StringBuilder = builder
 
