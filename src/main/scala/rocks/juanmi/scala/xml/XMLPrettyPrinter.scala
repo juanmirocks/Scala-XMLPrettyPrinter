@@ -1,4 +1,4 @@
-package com.jmcejuela.scala.xml
+package rocks.juanmi.scala.xml
 
 /**
    Copyright 2015 Juan Miguel Cejuela
