@@ -6,7 +6,6 @@ import java.io.File
 import scala.xml.XML
 import java.io.InputStreamReader
 import java.io.FileInputStream
-import scala.xml.PrettyPrinter
 import scala.xml.Group
 import scala.xml.Text
 import scala.xml.XML
