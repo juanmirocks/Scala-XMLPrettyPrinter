@@ -14,6 +14,21 @@ You could also have inlined `<span>`'s within a `<p>` without creating spurious 
 3. Thread safe: you can have the same (global) object used by different clients in parallel.
 4. Not tested, but presumably more efficient in both speed and space
 
+## Output Example
+
+```xml
+<notPre>
+  <!-- pre-formatting pretty-printing test (this comment should be aligned)-->
+  <pre>         ....      </pre>
+  <notPre>
+    <span>child span</span>
+    <!-- another comment -->
+    <pre>   !!!  an <span>inlined span</span> doesn't get broken and can have<span> spaces!!   </span><span>🙂</span></pre>
+    <span>child span with specials: &gt; &amp; ; &lt;pio&gt;*&lt;/pio&gt; &lt;!-- ? --&gt;</span>
+  </notPre>
+</notPre>
+```
+
 
 ## How to use
 
