@@ -14,8 +14,7 @@ package rocks.juanmi.scala.xml
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-   */
-
+ */
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileOutputStream
@@ -98,7 +97,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     out.close()
   }
 
-  /*---------------------------------------------------------------------------*/
+  //---------------------------------------------------------------------------
 
   private val < = '<'
   private val > = '>'
@@ -112,7 +111,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    */
   private def leavesText(node: Node): Option[String] = {
     val sb = new StringBuilder
-    def $(children: Seq[Node]): Option[String] = {
+    def $(children: Seq[Node]): Option[String] =
       if (children.isEmpty) Some(sb.toString)
       else {
         children.head match {
@@ -123,19 +122,18 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
           case _ => None
         }
       }
-    }
     $(node.child)
   }
 
-  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(implicit out: Writer): Unit = {
+  private def print(node: Node, pscope: NamespaceBinding = null, curIndent: Int = 0, inPre: Boolean = false)(
+      implicit out: Writer): Unit = {
     def whitespaceTrim(x: String) = x.trim
     val preformatted = inPre || node.isInstanceOf[Group] || preSet.contains(node.label) //note, group.label fails
     def ::(x: String): Unit = out write x
     def :::(x: Char): Unit = out write x
     def __ : Unit = (0 until curIndent).foreach(_ => :::(' '))
-    def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int): Unit = {
+    def printNodes(nodes: Seq[Node], newScope: NamespaceBinding, newIndent: Int): Unit =
       nodes.foreach(n => print(n, newScope, newIndent, preformatted))
-    }
 
     node match {
       case _: SpecialNode =>
@@ -171,9 +169,11 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     }
   }
 
-  /*---------------------------------------------------------------------------*/
+  //---------------------------------------------------------------------------
 
-  /** These functions were copied outright from [[scala.xml.{Utility, PrettyPrinter}]] */
+  /*
+   * The following functions were copied outright from [[scala.xml.{Utility, PrettyPrinter}]]
+   */
 
   private def sbToString(f: (StringBuilder) => Unit): String = {
     val sb = new StringBuilder
@@ -211,7 +211,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
     sbToString(mkEnd)
   }
 
-  /*---------------------------------------------------------------------------*/
+  //---------------------------------------------------------------------------
 
   private def fileWriter(file: File): Writer =
     new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), scala.io.Codec.UTF8.toString))
