@@ -160,7 +160,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def leafTag(n: Node): String = {
-    def mkLeaf(sb: StringBuilder) {
+    def mkLeaf(sb: StringBuilder): Unit = {
       sb append <
       n nameToString sb
       n.attributes buildString sb
@@ -170,7 +170,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def startTag(n: Node, pScope: NamespaceBinding): String = {
-    def mkStart(sb: StringBuilder) {
+    def mkStart(sb: StringBuilder): Unit = {
       sb append <
       n nameToString sb
       n.attributes buildString sb
@@ -181,7 +181,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   }
 
   private def endTag(n: Node): String = {
-    def mkEnd(sb: StringBuilder) {
+    def mkEnd(sb: StringBuilder): Unit = {
       sb append </
       n nameToString sb
       sb append >
@@ -218,16 +218,17 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
       this;
     }
 
-    def close() {}
-    def flush() {}
+    def close(): Unit = {}
 
-    override def write(value: String) {
+    def flush(): Unit = {}
+
+    override def write(value: String): Unit = {
       if (value != null) {
         builder.append(value);
       }
     }
 
-    def write(value: Array[Char], offset: Int, length: Int) {
+    def write(value: Array[Char], offset: Int, length: Int): Unit = {
       if (value != null) {
         builder.appendAll(value, offset, length);
       }
