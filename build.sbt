@@ -25,6 +25,6 @@ scalacOptions ++= Seq(
   "-Ywarn-unused-import"
 )
 
-scalafmtOnCompile := true
+scalafmtOnCompile in Compile := true
 scalafmtOnCompile in Test := false
 scalafmtVersion := "1.3.0"
