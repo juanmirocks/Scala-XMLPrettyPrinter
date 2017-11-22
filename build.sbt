@@ -26,4 +26,5 @@ scalacOptions ++= Seq(
 )
 
 scalafmtOnCompile := true
+scalafmtTestOnCompile := false
 scalafmtVersion := "1.3.0"
