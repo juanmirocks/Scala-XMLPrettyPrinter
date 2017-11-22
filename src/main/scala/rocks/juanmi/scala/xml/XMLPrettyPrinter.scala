@@ -54,7 +54,7 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
   /**
    * Pretty-write the node to given Writer.
    *
-   * The client is responsible to close the writer.
+   * The writer is closed at the end.
    *
    * @param out Writer to write to
    *
@@ -63,30 +63,25 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
    * @param includeXmlDeclaration true/false (optional, defaults to true). If true, the added declaration is: <?xml version="1.0" encoding="UTF-8"?>
    *
    */
-  def write(docType: DocType, addXmlDeclaration: Boolean)(out: Writer)(node: Node): Unit = {
-    if (addXmlDeclaration) {
-      out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
-      out write ↵
-    }
-    if (null != docType) {
-      out write docType.toString
-      out write ↵
+  def write(docType: DocType, addXmlDeclaration: Boolean)(out: Writer)(node: Node): Unit =
+    withCloseable(out) { out =>
+      if (addXmlDeclaration) {
+        out write s"""<?xml version="1.0" encoding="${scala.io.Codec.UTF8}"?>"""
+        out write ↵
+      }
+      if (null != docType) {
+        out write docType.toString
+        out write ↵
+      }
+
+      print(node)(out)
     }
 
-    print(node)(out)
-  }
+  def writeToFile(out: File, docType: DocType = null, addXmlDeclaration: Boolean = true): Node => Unit =
+    write(docType, addXmlDeclaration)(fileWriter(out)) _
 
-  def writeToFile(file: File, docType: DocType = null, addXmlDeclaration: Boolean = true): Node => Unit =
-    withCloseable(fileWriter(file)) { out =>
-      write(docType, addXmlDeclaration)(out) _
-    }
-
-  def writeToOutputStream(outputStream: OutputStream,
-                          docType: DocType = null,
-                          addXmlDeclaration: Boolean = true): Node => Unit =
-    withCloseable(outputStreamWriter(outputStream)) { out =>
-      write(docType, addXmlDeclaration)(out) _
-    }
+  def writeToOutputStream(out: OutputStream, docType: DocType = null, addXmlDeclaration: Boolean = true): Node => Unit =
+    write(docType, addXmlDeclaration)(outputStreamWriter(out)) _
 
   //---------------------------------------------------------------------------
 
