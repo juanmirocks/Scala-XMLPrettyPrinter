@@ -23,7 +23,7 @@ import scala.xml.dtd.DocType
 
 /**
  * Utility to pretty-print Standard Scala XML.
-*
+ *
  * Specially useful to have beautifully-formatted HTMLs or XHTMLs. You can pretty-print a scala (XML) Node to String or
  * directly write it to a File for better efficiency.
  *
@@ -222,17 +222,15 @@ class XMLPrettyPrinter(indent: Int, pre: String*) {
 
     def flush(): Unit = {}
 
-    override def write(value: String): Unit = {
+    override def write(value: String): Unit =
       if (value != null) {
         builder.append(value);
       }
-    }
 
-    def write(value: Array[Char], offset: Int, length: Int): Unit = {
+    def write(value: Array[Char], offset: Int, length: Int): Unit =
       if (value != null) {
         builder.appendAll(value, offset, length);
       }
-    }
 
     def getBuilder: StringBuilder = builder
 
