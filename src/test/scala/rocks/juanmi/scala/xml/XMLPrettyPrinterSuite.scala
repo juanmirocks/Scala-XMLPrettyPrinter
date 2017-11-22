@@ -105,12 +105,12 @@ class XMLPrettyPrinterSuite extends FunSuite {
     //Can't trivially test that the contents are the same because XML.load does not guarantee the order of the attributes
 
     withTmpFile(resource) { f =>
-      printer.write(node, docType)(f)
+      printer.writeToFile(f, docType)(node)
       val prettyNode = XMLloadUTF8(f)
     }
 
     withTmpFile("pres_"+resource) { f =>
-      printerWithPres.write(node, docType)(f)
+      printer.writeToFile(f, docType)(node)
       val prettyNode = XMLloadUTF8(f)
     }
   }
