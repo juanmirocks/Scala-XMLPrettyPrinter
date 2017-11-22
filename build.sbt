@@ -1,6 +1,6 @@
 organization := "rocks.juanmi"
 name := "XMLPrettyPrinter"
-version := "2.0.0-RC1" //Remember: also change the version in XMLPrettyPrinter.scala
+version := "2.0.0" //Remember: also change the version in XMLPrettyPrinter.scala
 
 //-------------------------------------------------------------------------
 
