@@ -21,3 +21,5 @@ libraryDependencies ++= Seq(
   //
   "org.scala-lang.modules" %% "scala-xml" % "1.0.3"
 )
+scalafmtOnCompile := true
+scalafmtVersion := "1.3.0"
