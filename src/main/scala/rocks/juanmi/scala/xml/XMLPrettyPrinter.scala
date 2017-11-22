@@ -24,8 +24,8 @@ import scala.xml.dtd.DocType
 /**
  * Utility to pretty-print Standard Scala XML.
  *
- * Specially useful to have beautifully-formatted HTMLs or XHTMLs. You can pretty-print a scala (XML) Node to String or
- * directly write it to a File for better efficiency.
+ * Specially useful to have beautifully-formatted HTMLs or XHTMLs. You can pretty-format a scala (XML) Node to String or
+ * directly write it to a java File, OutputStream, or Writer, for maximum efficiency.
  *
  *
  * More info: https://github.com/juanmirocks/Scala-XML-Pretty-Printer
