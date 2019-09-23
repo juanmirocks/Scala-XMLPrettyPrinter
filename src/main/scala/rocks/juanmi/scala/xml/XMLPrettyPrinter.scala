@@ -31,7 +31,7 @@ import scala.xml.dtd.DocType
  * More info: https://github.com/juanmirocks/Scala-XML-Pretty-Printer
  *
  * @author Juan Miguel Cejuela (@juanmirocks)
- * @version 2.1.0
+ * @version 2.2.0
  *
  * @param indent: indentation space for a node's subnodes
  * @param pre: elements to be considered as pre-formatted
