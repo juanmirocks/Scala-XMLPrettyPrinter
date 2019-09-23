@@ -12,9 +12,13 @@ libraryDependencies ++= Seq(
 
 //-------------------------------------------------------------------------
 
-scalaVersion in ThisBuild := "2.13.1"
+val scala_2_13 = "2.13.1"
+val scala_2_12 = "2.12.10"
+val scala_2_11 = "2.11.12"
 
-crossScalaVersions := Seq("2.11.11", "2.12.10","2.13.1")
+scalaVersion in ThisBuild := scala_2_13
+
+crossScalaVersions := Seq(scala_2_11, scala_2_12, scala_2_13)
 
 scalacOptions ++= Seq(
   "-unchecked",
