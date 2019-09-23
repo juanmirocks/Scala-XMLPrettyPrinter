@@ -1,4 +1,4 @@
-# XMLPrettyPrinter ✨
+# XMLPrettyPrinter ✨ _scala support for: 2.11, 2.12, 2.13_
 
 Advantages over `scala.xml.PrettyPrinter`:
 
