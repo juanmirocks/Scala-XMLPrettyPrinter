@@ -1,18 +1,20 @@
 organization := "rocks.juanmi"
 name := "XMLPrettyPrinter"
-version := "2.1.0" //Remember: also change the version in XMLPrettyPrinter.scala
+version := "2.2.0" //Remember: also change the version in XMLPrettyPrinter.scala
 
 //-------------------------------------------------------------------------
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.4" % Test,
+  "org.scalatest" %% "scalatest" % "3.0.8" % Test,
   //
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.6"
+  "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
 )
 
 //-------------------------------------------------------------------------
 
-scalaVersion in ThisBuild := "2.11.11"
+scalaVersion in ThisBuild := "2.13.1"
+
+crossScalaVersions := Seq("2.11.11", "2.12.10","2.13.1")
 
 scalacOptions ++= Seq(
   "-unchecked",
@@ -22,7 +24,7 @@ scalacOptions ++= Seq(
   "-encoding",
   "UTF-8",
   "-Ywarn-unused",
-  "-Ywarn-unused-import"
+  //"-Ywarn-unused-import"
 )
 
 scalafmtOnCompile in Compile := true
