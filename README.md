@@ -38,7 +38,7 @@ You could also have inlined `<span>`'s within a `<p>` without creating spurious 
 1. Make sure you have `scala-xml` available in your project.
 
 ```scala
-libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.6"
+libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
 ```
 
 2. Drop the [single-file code](src/main/scala/rocks/juanmi/scala/xml/XMLPrettyPrinter.scala) into your project
